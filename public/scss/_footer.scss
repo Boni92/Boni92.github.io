@@ -1,0 +1,27 @@
+footer{
+    margin: 5vw;
+    padding: 1vm;
+    color: blanchedalmond;
+
+    div{
+        div{
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3em;
+
+                div{
+                }
+                a {
+                    text-decoration: none;
+                    margin: 5px 3px;
+                }
+            }
+            #divtitulo, #divtitulofinal{
+                margin: 3em 0;
+            }
+        }
+    }
+}

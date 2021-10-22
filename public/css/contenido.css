@@ -1,4 +1,533 @@
-body{
-    background-color: black;
-    
-}
+header {
+  margin: 5vw;
+  padding: 1vm; }
+  header div nav a {
+    margin-left: 20px;
+    display: inline-block;
+    text-decoration: none; }
+
+.colorclaro {
+  color: #c7c5c1 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3vw;
+  opacity: .7; }
+
+.menu {
+  position: fixed;
+  right: 2em;
+  top: 33em;
+  z-index: 10;
+  text-align: right;
+  transform: rotate(-90deg) translateX(100%);
+  transform-origin: bottom right;
+  font-size: 12px; }
+
+main {
+  margin: 5vw;
+  padding: 1vm;
+  color: blanchedalmond; }
+  main div section {
+    margin: 5em 0 5em 0; }
+  main div #section1 {
+    position: relative;
+    margin: 10vh 0 10vh 0; }
+    main div #section1 #nombreintro {
+      word-spacing: 1vw;
+      letter-spacing: 0; }
+      main div #section1 #nombreintro #nicolas {
+        font-weight: 900; }
+        main div #section1 #nombreintro #nicolas span {
+          text-shadow: 0px 0px 55px black; }
+      main div #section1 #nombreintro #borsari {
+        margin: 0px 0 0 180px;
+        font-weight: 900;
+        text-shadow: 0px 0px 55px black; }
+    main div #section1 #videointro {
+      width: 300px;
+      height: 300px;
+      background-color: #2e2e81;
+      position: absolute;
+      right: 200px;
+      top: 10px;
+      z-index: 10; }
+  main div #section2 #contenedor2 {
+    display: flex;
+    flex-direction: row; }
+    main div #section2 #contenedor2 #presentacion {
+      padding-left: 60px; }
+      main div #section2 #contenedor2 #presentacion #divabout p {
+        width: 600px;
+        height: auto; }
+      main div #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+        color: seagreen; }
+      main div #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+        color: #d8d8d8;
+        font-style: none;
+        font-size: 1.2rem !important;
+        font-weight: 100;
+        padding-top: 1rem;
+        padding-bottom: 1rem; }
+      main div #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+        color: seagreen;
+        font-size: 1.2rem !important;
+        font-weight: 100; }
+    main div #section2 #contenedor2 #imagen {
+      clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+      z-index: -1; }
+  main div #section3 {
+    margin-top: 3em; }
+    main div #section3 #divproyectos #proyectouno, main div #section3 #divproyectos #proyectodos {
+      margin: 2em 0 2em 0;
+      width: 50%;
+      position: relative; }
+    main div #section3 #divproyectos #proyectouno {
+      background: url(../imgs/section3/fondo1.jpg);
+      background-color: #cac6c6;
+      background-blend-mode: screen;
+      width: 1200px;
+      height: 500px;
+      border: none;
+      box-shadow: 0 0 10px 5px black; }
+    main div #section3 #divproyectos #proyectodos {
+      background: url(../imgs/section3/fondo2.jpg);
+      background-color: #959393;
+      background-blend-mode: screen;
+      width: 1200px;
+      height: 500px;
+      border: none;
+      box-shadow: 0 0 10px 5px black; }
+    main div #section3 #divproyectos div .bloquetexto {
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+      text-align: left; }
+    main div #section3 #divproyectos div span {
+      font-family: 'Heebo', sans-serif;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: 800 !important;
+      color: black; }
+    main div #section3 #divproyectos div p {
+      font-weight: 100px;
+      color: black; }
+    main div #section3 #divproyectos div a {
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(270deg, #f67b7b -14%, #da3f24 100%);
+      padding: 14px 30px 14px 30px;
+      text-align: center;
+      font-family: 'Heebo', sans-serif;
+      font-size: 20px;
+      letter-spacing: 1px !important;
+      font-style: normal; }
+  main div #section4 {
+    margin-top: 3em; }
+    main div #section4 #divhistoria {
+      margin-left: 3em; }
+      main div #section4 #divhistoria p {
+        margin-bottom: 0;
+        margin-left: .5em; }
+  main div div div div div div {
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.goma {
+  font-size: 50px; }
+
+.goma:hover {
+  display: inline-block;
+  animation: goma 1s; }
+
+.fontapodo {
+  color: #c7c5c1 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: .7vw;
+  opacity: .7; }
+
+.fontnombre {
+  font-family: 'Antonio', sans-serif;
+  font-size: 10vw;
+  font-weight: 300px; }
+
+.titulo {
+  font-family: 'Antonio', sans-serif;
+  margin-bottom: 1em; }
+
+.textos {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 2.5rem; }
+
+.animadoX, .animadoXd, .animado {
+  opacity: 0;
+  transition: all 0.5s; }
+
+.mostrarIzquierda {
+  animation: mostrarIzq 2s; }
+
+.mostrarDerecha {
+  animation: mostrarDer 1s; }
+
+.contenedor {
+  padding: 10px; }
+
+.lineas {
+  width: 80%;
+  margin: auto;
+  height: 70px;
+  position: relative; }
+
+.lineas::after, .lineas::before {
+  content: '';
+  position: absolute;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  width: 45%;
+  top: 50%; }
+
+.lineas::after {
+  left: -100px; }
+
+.lineas::before {
+  right: -100px; }
+
+.anchof {
+  height: 200px; }
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.circulo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(245, 222, 179, 0.767);
+  box-shadow: 0 0 15px 5px rgba(82, 82, 82, 0.904);
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
+  padding: 3%; }
+
+.textoint {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  color: chocolate; }
+
+.imag {
+  position: relative;
+  width: 200px; }
+
+.imag_img {
+  display: block;
+  width: 100%;
+  height: auto;
+  top: 0%;
+  left: 0%;
+  transform: translate(-25%, 25%);
+  margin: auto; }
+
+.imag_overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  color: chocolate;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-out; }
+
+.imag:hover .imag_overlay {
+  transform: translateX(150px);
+  opacity: 1; }
+
+.imag_description {
+  font-size: 2em;
+  text-align: left;
+  width: 70vw;
+  height: auto;
+  font-family: 'Open Sans Condensed', sans-serif; }
+
+.contenedorimg {
+  transition: transform 1s ease; }
+
+.contenedorimg:hover {
+  transform: scale(1.1); }
+
+#forma1 {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 15px 1px rgba(59, 59, 59, 0.623);
+  background: #e91e2f;
+  color: #141424;
+  text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative; }
+
+#forma1::before {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #141424;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s ease-out; }
+
+#forma1::after {
+  content: 'Si se puede imaginar, se puede programar';
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  color: chocolate;
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 70px;
+  text-shadow: .1rem .1rem .1rem #333;
+  transition: 2s ease-out;
+  opacity: 0; }
+
+#forma1:hover::before {
+  transform: scale(2);
+  opacity: 1; }
+
+#forma1:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1; }
+
+#forma2 {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 15px 1px rgba(70, 69, 69, 0.623);
+  background: #e0d4d5;
+  color: #141424;
+  text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative; }
+
+#forma2::before {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #141424;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s ease-out; }
+
+#forma2::after {
+  content: 'Fine...I do it myself';
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  color: chocolate;
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 70px;
+  text-shadow: .1rem .1rem .1rem #333;
+  transition: 2s ease-out;
+  opacity: 0; }
+
+#forma2:hover::before {
+  transform: scale(2);
+  opacity: 1; }
+
+#forma2:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1; }
+
+#forma3 {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 15px 1px rgba(70, 69, 69, 0.623);
+  background: chocolate;
+  color: #141424;
+  text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative; }
+
+#forma3::before {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #141424;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s ease-out; }
+
+#forma3::after {
+  content: '4 8 15 16 23 42';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  color: chocolate;
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 70px;
+  text-shadow: .1rem .1rem .1rem #333;
+  transition: 2s ease-out;
+  opacity: 0; }
+
+#forma3:hover::before {
+  transform: scale(2);
+  opacity: 1; }
+
+#forma3:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1; }
+
+#forma4 {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 15px 1px rgba(70, 69, 69, 0.623);
+  background: #28a347;
+  color: #141424;
+  text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative; }
+
+#forma4::before {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: none;
+  background: #141424;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s ease-out; }
+
+#forma4::after {
+  content: url(../imgs/benice.jpg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  color: chocolate;
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 70px;
+  text-shadow: .1rem .1rem .1rem #333;
+  transition: 2s ease-out;
+  opacity: 0; }
+
+#forma4:hover::before {
+  transform: scale(2);
+  opacity: 1; }
+
+#forma4:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1; }
+
+#icono {
+  margin: 15px 0;
+  transform: scale(1.3); }
+
+@keyframes goma {
+  0% {
+    transform: scale3d(1, 1, 1); }
+  35% {
+    transform: scale3d(1.25, 0.75, 1);
+    color: chocolate; }
+  45% {
+    transform: scale3d(0.75, 1.1, 1);
+    color: chocolate; }
+  60% {
+    transform: scale3d(1.2, 0.8, 1);
+    color: chocolate; }
+  75% {
+    transform: scale3d(0.8, 0.95, 1);
+    color: chocolate; }
+  85% {
+    transform: scale3d(1.1, 0.85, 1);
+    color: chocolate; }
+  95% {
+    transform: scale3d(0.9, 0.99, 1);
+    color: chocolate; }
+  100% {
+    transform: scale3d(1, 1, 1);
+    color: chocolate; } }
+
+@keyframes mostrarIzq {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes mostrarDer {
+  0% {
+    transform: translateX(1200px); }
+  100% {
+    transform: translateX(0px); } }
+
+footer {
+  margin: 5vw;
+  padding: 1vm;
+  color: blanchedalmond; }
+  footer div div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em; }
+    footer div div div a {
+      text-decoration: none;
+      margin: 5px 3px; }
+  footer div div #divtitulo, footer div div #divtitulofinal {
+    margin: 3em 0; }
+
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; }
+  html body {
+    background: #141424; }
