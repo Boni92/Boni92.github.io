@@ -12,12 +12,23 @@ footer{
                 justify-content: center;
                 gap: 3em;
 
-                div{
+                #divredes{
+                    a {
+                        text-decoration: none;
+                        margin: 5px 3px;
+                        color: chocolate;
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        p{
+                            font-size: 1.5em !important;
+
+                        }
+                    }
                 }
-                a {
-                    text-decoration: none;
-                    margin: 5px 3px;
-                }
+                
             }
             #divtitulo, #divtitulofinal{
                 margin: 3em 0;
