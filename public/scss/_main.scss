@@ -6,13 +6,25 @@ main{
     //font-family: 'Sora', sans-serif;
     //font-family: 'Nunito', sans-serif;
     //font-family: 'Anton', sans-serif;
-    margin: 5vw;
-    padding: 1vm;
+    
     color: blanchedalmond;
+    #ppal{
+        #sec-scr{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+    }
 
-    div{
-        section{
-            margin: 5em 0 5em 0;
+
+    #sec{
+        margin: 5vw;
+        padding: 1vm;
+        #section0{
+            padding-top: 5vh;
         }
         #section1{
             position: relative;
@@ -35,17 +47,13 @@ main{
                 }
             }
             #videointro{
-                width: 300px;
-                height: 300px;
-                background-color: rgb(46, 46, 129);
-
                 position: absolute;
-                right: 200px;
-                top: 10px;
-                z-index: 10;
+                right: 10vw;
+                bottom: 5vh;
             }
         }
         #section2{
+            padding: 3em 0 5em 0;
             #contenedor2{
                 display: flex;
                 flex-direction: row;
@@ -87,7 +95,8 @@ main{
             }
         }
         #section3{
-            margin-top: 3em;
+            padding: 5em 0 5em 0;
+            padding-top: 3em;
             #divproyectos{
                 
                 #proyectouno, #proyectodos{
@@ -154,7 +163,8 @@ main{
             }
         }
         #section4{
-            margin-top: 3em;
+            padding: 5em 0 5em 0;
+            padding-top: 3em;
             #divhistoria{
                 margin-left: 3em;
                 p{
@@ -190,6 +200,38 @@ main{
 
 
 //Inicio CLASES
+
+//=== section 0
+.scroll-down{
+    height: 50px;
+    width: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -90%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after{
+    top: 30%;
+    animation-delay: .5s;
+
+}
+//=== section 1, 2 y 3
 .goma{
     font-size: 50px;
 }
@@ -218,18 +260,125 @@ main{
     font-style: italic;
     line-height: 2.5rem;
 }
-
-.animadoX, .animadoXd, .animado{
-    opacity: 0;
-    transition: all 0.5s;
+.contieneimg{
+    
+    width: 300px;
+    height: 400px;
+    background: url(../imgs/section1/portada.jpg);
+    box-shadow: inset 0 0 5px 6px $maincolor;
 }
 
+.animadoX, .animadoXd{
+    opacity: 0;
+    transition: all 3s;
+}
+.animado{
+    opacity: 0;
+    transition: all 5s;
+}
+.animadoXa{
+    opacity: 0;
+    transition: all 4s;
+}
 .mostrarIzquierda{
     animation: mostrarIzq 2s;
 }
 .mostrarDerecha{
-    animation: mostrarDer 1s;
+    animation: mostrarDer 2s;
 }
+
+// .box{
+//     position: relative;
+//     width: 100px;
+//     height: auto;
+//     transform-style: preserve-3d;
+//     animation: animate 20s linear infinite;
+// }
+// .box span{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 200%;
+//     height: 100%;
+//     transform-origin: center;
+//     transform-style: preserve-3d;
+//     transform: rotateY(calc(var(--i) * 90deg)) translateZ(100px);
+// }
+// @keyframes animate{
+//     0%{
+//         transform: perspective(1000px) rotateY(0deg);
+//     }
+//     100%{
+//         transform: perspective(1000px) rotateY(360deg);
+//     }
+// }
+// .box span img{
+//     position: absolute;
+//     top: 10vh;
+//     left: 0;
+//     object-fit: cover;
+// }
+//===section 4 ===
+.imag{
+    position:relative;
+    width: 200px;
+}
+.imag_img{
+    display: block;
+    width: 100%;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    transform: translate(-25%, 25%);
+    margin: auto;
+}
+.imag_overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: chocolate;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+    justify-content: center;
+    opacity: 0;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+
+    
+}
+.imag:hover .imag_overlay{
+    transform: translateX(150px);
+    opacity: 1;
+}
+.imag_description{
+    font-size: 2em;
+    text-align: left;
+    width: 70vw;
+    height: auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+
+}
+.contenedorimg{
+    transition: transform 1s ease;
+
+}
+.contenedorimg:hover{
+    transform: scale(1.1);
+
+}
+//=== footer
+.mostrarAbajo{
+    animation: mostrarAba 2s;
+}
+
+//===interfases===
 .contenedor{
     padding: 10px;
 }
@@ -287,62 +436,6 @@ main{
     color: chocolate;
 
 }
-//===
-.imag{
-    position:relative;
-    width: 200px;
-}
-.imag_img{
-    display: block;
-    width: 100%;
-    height: auto;
-    top: 0%;
-    left: 0%;
-    transform: translate(-25%, 25%);
-    margin: auto;
-}
-.imag_overlay{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    color: chocolate;
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start ;
-    justify-content: center;
-    opacity: 0;
-
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-
-    
-}
-.imag:hover .imag_overlay{
-    transform: translateX(150px);
-    opacity: 1;
-}
-.imag_description{
-    font-size: 2em;
-    text-align: left;
-    width: 70vw;
-    height: auto;
-    font-family: 'Open Sans Condensed', sans-serif;
-
-
-}
-.contenedorimg{
-    transition: transform 1s ease;
-
-}
-.contenedorimg:hover{
-    transform: scale(1.1);
-
-}
-//===interfases===
 #forma1{
     height: 50px;
     width: 50px;
@@ -550,6 +643,21 @@ main{
 //Fin CLASES
 
 //Inicio ANIMACIONES
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
 @keyframes goma{
     0%{
         transform: scale3d(1,1,1);
@@ -602,4 +710,13 @@ main{
         transform: translateX(0px);
     }
 }
+@keyframes mostrarAba{
+    0% {
+        transform: translateY(1200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 //Fin ANIMACIONES
