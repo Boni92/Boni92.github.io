@@ -1,6 +1,8 @@
 footer{
-    margin: 5vw;
-    padding: 1vm;
+    margin: 3vw;
+    margin-top: 0;
+    padding: 1vw;
+    padding-top: 0;
     color: blanchedalmond;
 
     div{
@@ -10,28 +12,35 @@ footer{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 3em;
 
                 #divredes{
                     a {
                         text-decoration: none;
-                        margin: 5px 3px;
+                        margin: 0.2vh 0.2vh;
+                        padding-top: 5vh;
+
                         color: chocolate;
 
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+                        img{
+                            width: 2.5vw;
+                            height: auto;
+                        }
                         p{
-                            font-size: 1.5em !important;
-
+                            font-size: 2.8vh;
                         }
                     }
                 }
                 
             }
-            #divtitulo, #divtitulofinal{
-                margin: 3em 0;
+            #divtitulofinal{
+                padding-top: 4vh;
+            }
+            #divtitulo{
+                padding-bottom: 4vh;
             }
         }
     }

@@ -1,0 +1,1042 @@
+
+//========  media query- MOBILE  =========/
+@media only screen and (max-width: 319px) {
+    header{
+        padding: 0;
+        div{
+            nav{
+                
+                a {
+                    padding-left: 1vw;
+                    display: inline-block;
+                    text-decoration: none;
+                    // cursor: pointer;
+                    // opacity: .5;
+                    // transition: opacity .5s;
+                }
+            }
+        }
+        
+    .colorclaro{
+        color: rgb(199, 197, 193) !important;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vw;
+        opacity: .7;
+    }
+    .menu {
+        position: fixed;
+        right: 3.5vw;
+        z-index: 10;
+        text-align: right;
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+    
+    }
+    }
+
+    main{
+
+        #sec{
+            
+            #section0{
+                #boni92{
+                    font-size: 3vw !important;
+                }
+            }
+            #section1{
+                flex-direction: column;
+                margin-bottom: 0;
+                margin-top: 0;
+    
+                #nombreintro{
+                    #borsari{
+                        margin: 0 0 0 0vw;
+                    }
+                }
+                #videointro{
+                    transform: scale(0.7);
+                }
+            }
+            #section2{
+                padding-top: 0;
+    
+                #contenedor2{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    #presentacion{
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        #divabout{
+                            p{
+                                width: 40vw*1.8;
+                                height: auto;
+                                text-align: justify;
+                                
+                            }
+                            #parrafo1{
+                                font-size: 3vw*2;
+                                line-height: 3.5vw*2;
+    
+                            }
+                            #parrafo2{
+                                // color: rgb(216, 216, 216);
+                                // font-style: none;
+                                font-size: 2vw*2 !important;
+                                // font-weight: 200;
+        
+                                // padding-top: 1rem;
+                                // padding-bottom: 1rem;
+                            }
+                            #parrafo3{
+                                // color: seagreen;
+                                font-size: 2vw*2 !important;
+                                // font-weight: 200;
+        
+                            }
+                        }
+                    }
+                    
+                    #imagen{
+                        transform: scale(0.8);
+                        img{
+                            width: 90vw;
+                            height: 90vw;
+                        }
+                    }
+                }
+            
+            }
+            #section3{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                #divproyectos{
+                    .textos{
+                        line-height: 4vw !important;
+                    }
+                    #proyectouno, #proyectodos{
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 80vw;
+                        height: 40vw;
+    
+                        display: flex;
+                        justify-content:center;
+                        align-items: center;
+                        
+    
+                    }
+                }
+                div{
+                    .bloquetexto{
+                        position: unset;
+                        bottom: 0;
+                        left: 0;
+                        text-align: center !important;
+    
+                    }
+                    div{
+                        
+                        #bloque{
+                            margin-top: 14vw !important;
+    
+    
+                            span{
+                                font-family: 'Heebo', sans-serif;
+                                //font-family: 'Work Sans', sans-serif;
+                                font-size: 5vw !important;
+                                text-transform: uppercase;
+                                font-weight: 800 !important;
+                                color: rgb(0, 0, 0);
+                            }
+                            p{
+                                font-size: 4vw !important;
+                                padding-top: 1vw;
+                                font-weight: 600;
+                            }
+                            div{
+                                a{
+                                    padding: 1.5vw 3vw 1.5vw 3vw !important;
+                                    font-size: 2vw !important;
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+                }
+                
+            }
+            #section4{
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                #divhistoria{
+                    margin: 0;
+                    div{
+                        #boton1,#boton2, #boton3, #boton4, #boton5{
+                            
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        }
+                        div{
+                            #libros, #avion, #gif{
+                                transform: translate(0%, 0%) !important;
+                            }
+                            
+                        }
+                    }
+                }
+                p{
+                    width: 50vw;
+                }
+                .anchof{
+                    
+                    height: auto;
+                }
+                .imag{
+                    height: auto;
+                }
+                .imag_img{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: auto;
+                    transform: translate(0%, 0%);
+                    margin: 10vw 0 0 0;
+                }
+                .imag_overlay{
+                    position: relative;
+                    align-items: center ;
+                    opacity: 1;
+                    transition-property: unset;                
+                }
+                
+                .imag:hover .imag_overlay{
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+                .imag_description{
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .lineas{
+        width: 30%;
+        margin: auto;
+        height: 70px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .lineas::after, .lineas::before{
+        content:'';
+        position: absolute;
+        margin: auto;
+        height: 2px;
+        background: #fff;
+        width: 65%;
+        top: 50%;
+    }
+    .lineas::after{
+        left: -28vw;
+    }
+    .lineas::before{
+        right: -28vw;
+    }
+    
+    #forma1::after{
+        content: 'Si se puede imaginar, se puede programar';
+        position: absolute;
+        width: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 5vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma2::after{
+        content: 'Fine...I do it myself';
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 5vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma3::after{
+        content: '4 8 15 16 23 42';
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 6vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    
+        font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma4::after{
+        content: url(../imgs/benice.jpg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 2s ease-out;
+        opacity: 0;
+        z-index: 50;
+    }
+footer{
+    .textos{
+        text-align: center;
+        font-size: 6vw;
+
+    }
+
+    div{
+        div{
+            div{
+                #divredes{
+                    a{
+                        img{
+                            
+                            width: 10vw;
+                            height: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+        
+    
+}
+}
+
+//========  media query- INTERMEDIO  =========/
+@media only screen and (min-width: 320px) and (max-width: 634.5px){
+    
+header{
+    padding: 0;
+    div{
+        nav{
+            
+            a {
+                padding-left: 1vw;
+                display: inline-block;
+                text-decoration: none;
+                // cursor: pointer;
+                // opacity: .5;
+                // transition: opacity .5s;
+            }
+        }
+    }
+}
+    .colorclaro{
+        color: rgb(199, 197, 193) !important;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vw;
+        opacity: .7;
+    }
+    .menu {
+        position: fixed;
+        right: 3.5vw;
+        z-index: 10;
+        text-align: right;
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+    
+    }
+
+main{
+
+    #sec{
+        
+        #section0{
+            #boni92{
+                font-size: 3vw !important;
+            }
+        }
+        #section1{
+            flex-direction: column;
+            margin-bottom: 0;
+            margin-top: 0;
+
+            #nombreintro{
+                #borsari{
+                    margin: 0 0 0 0vw;
+                }
+            }
+            #videointro{
+                transform: scale(0.7);
+            }
+        }
+        #section2{
+            padding-top: 0;
+
+            #contenedor2{
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                #presentacion{
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    #divabout{
+                        p{
+                            width: 40vw*1.8;
+                            height: auto;
+                            text-align: justify;
+                            
+                        }
+                        #parrafo1{
+                            font-size: 3vw*2;
+                            line-height: 3.5vw*2;
+
+                        }
+                        #parrafo2{
+                            // color: rgb(216, 216, 216);
+                            // font-style: none;
+                            font-size: 2vw*2 !important;
+                            // font-weight: 200;
+    
+                            // padding-top: 1rem;
+                            // padding-bottom: 1rem;
+                        }
+                        #parrafo3{
+                            // color: seagreen;
+                            font-size: 2vw*2 !important;
+                            // font-weight: 200;
+    
+                        }
+                    }
+                }
+                
+                #imagen{
+                    transform: scale(0.8);
+                    img{
+                        width: 90vw;
+                        height: 90vw;
+                    }
+                }
+            }
+        
+        }
+        #section3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #divproyectos{
+                .textos{
+                    line-height: 4vw !important;
+                }
+                #proyectouno, #proyectodos{
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 80vw;
+                    height: 40vw;
+
+                    display: flex;
+                    justify-content:center;
+                    align-items: center;
+                    
+
+                }
+            }
+            div{
+                .bloquetexto{
+                    position: unset;
+                    bottom: 0;
+                    left: 0;
+                    text-align: center !important;
+
+                }
+                div{
+                    
+                    #bloque{
+                        margin-top: 14vw !important;
+
+
+                        span{
+                            font-family: 'Heebo', sans-serif;
+                            //font-family: 'Work Sans', sans-serif;
+                            font-size: 5vw !important;
+                            text-transform: uppercase;
+                            font-weight: 800 !important;
+                            color: rgb(0, 0, 0);
+                        }
+                        p{
+                            font-size: 4vw !important;
+                            padding-top: 1vw;
+                            font-weight: 600;
+                        }
+                        div{
+                            a{
+                                padding: 1.5vw 3vw 1.5vw 3vw !important;
+                                font-size: 2vw !important;
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+            
+        }
+        #section4{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #divhistoria{
+                margin: 0;
+                div{
+                    #boton1,#boton2, #boton3, #boton4, #boton5{
+                        
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    }
+                    div{
+                        #libros, #avion, #gif{
+                            transform: translate(0%, 0%) !important;
+                        }
+                        
+                    }
+                }
+            }
+            p{
+                width: 50vw;
+            }
+            .anchof{
+                
+                height: auto;
+            }
+            .imag{
+                height: auto;
+            }
+            .imag_img{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: auto;
+                transform: translate(0%, 0%);
+                margin: 10vw 0 0 0;
+            }
+            .imag_overlay{
+                position: relative;
+                align-items: center ;
+                opacity: 1;
+                transition-property: unset;                
+            }
+            
+            .imag:hover .imag_overlay{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            .imag_description{
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+}
+    .lineas{
+        width: 30%;
+        margin: auto;
+        height: 70px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .lineas::after, .lineas::before{
+        content:'';
+        position: absolute;
+        margin: auto;
+        height: 2px;
+        background: #fff;
+        width: 65%;
+        top: 50%;
+    }
+    .lineas::after{
+        left: -28vw;
+    }
+    .lineas::before{
+        right: -28vw;
+    }
+    
+    #forma1::after{
+        content: 'Si se puede imaginar, se puede programar';
+        position: absolute;
+        width: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 5vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma2::after{
+        content: 'Fine...I do it myself';
+        position: absolute;
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 5vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma3::after{
+        content: '4 8 15 16 23 42';
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        font-size: 6vw;
+        color: chocolate;
+        font-family: 'IM Fell DW Pica', serif;    
+        font-weight: 70px;
+        text-shadow: .1rem .1rem .1rem #333;
+        transition: 2s ease-out;
+        opacity: 0;
+    }
+    #forma4::after{
+        content: url(../imgs/benice.jpg);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 2s ease-out;
+        opacity: 0;
+        z-index: 50;
+    }
+footer{
+    .textos{
+        text-align: center;
+        font-size: 6vw;
+
+    }
+
+    div{
+        div{
+            div{
+                #divredes{
+                    a{
+                        img{
+                            
+                            width: 10vw;
+                            height: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+        
+    
+}
+}
+
+//========  media query- TABLET  =========/
+@media only screen and (min-width: 635px) and (max-width: 768px) {
+    header{
+        padding: 0;
+        div{
+            nav{
+                
+                a {
+                    padding-left: 1vw;
+                    display: inline-block;
+                    text-decoration: none;
+                    // cursor: pointer;
+                    // opacity: .5;
+                    // transition: opacity .5s;
+                }
+            }
+        }
+    }
+        .colorclaro{
+            color: rgb(199, 197, 193) !important;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3vw;
+            opacity: .7;
+        }
+        .menu {
+            position: fixed;
+            right: 3.5vw;
+            z-index: 10;
+            text-align: right;
+            transform: rotate(-90deg);
+            transform-origin: bottom right;
+        
+        }
+    main{
+        #sec{
+            #section1{
+                #nombreintro{
+                    #borsari{
+                        margin: 0 0 0 0vw;
+                    }
+                }
+                #videointro{
+                    transform: scale(0.5);
+                }
+            }
+
+            #section2{
+                #contenedor2{
+                    #presentacion{
+                        transform: translateX(-20vw);
+                        
+                        #divabout{
+                            padding-left: 2vw;
+                            p{
+                                width: 40vw;
+                                height: auto;
+                                
+                            }
+                            #parrafo1{
+                                font-size: 3vw;
+                                line-height: 3.5vw;
+
+                            }
+                            #parrafo2{
+                                // color: rgb(216, 216, 216);
+                                // font-style: none;
+                                font-size: 1.8vw !important;
+                                // font-weight: 200;
+        
+                                // padding-top: 1rem;
+                                // padding-bottom: 1rem;
+                            }
+                            #parrafo3{
+                                // color: seagreen;
+                                font-size: 1.8vw !important;
+                                // font-weight: 200;
+        
+                            }
+                        }
+                    }
+                    
+                    #imagen{
+                        transform: scale(0.5);
+                        img{
+                            width: 75vw;
+                            height: 75vw;
+                        }
+                    }
+                }
+            
+            }
+            #section3{
+                #divproyectos{
+                    #proyectouno, #proyectodos{
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 80vw;
+                        height: 40vw;
+
+                    }
+                }
+                div{
+                    span{
+                        font-family: 'Heebo', sans-serif;
+                        //font-family: 'Work Sans', sans-serif;
+                        font-size: 5vw !important;
+                        text-transform: uppercase;
+                        font-weight: 800 !important;
+                        color: rgb(0, 0, 0);
+                    }
+                    a{
+                        padding: 1.5vw 3vw 1.5vw 3vw !important;
+                        font-size: 2vw !important;
+
+
+
+                    }
+                }
+            }
+            #section4{
+                p{
+                    width: 50vw;
+                }
+            }
+        }
+    }
+        
+        .lineas{
+            width: 60%;
+            margin: auto;
+            height: 70px;
+            position: relative;
+            
+        }
+        .lineas::after, .lineas::before{
+            content:'';
+            position: absolute;
+            margin: auto;
+            height: 2px;
+            background: #fff;
+            width: 55%;
+            top: 50%;
+        }
+        .lineas::after{
+            left: -100px;
+        }
+        .lineas::before{
+            right: -100px;
+        }
+        #forma1::after{
+            content: 'Si se puede imaginar, se puede programar';
+            position: absolute;
+            width: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 3vw;
+            color: chocolate;
+            font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+            text-shadow: .1rem .1rem .1rem #333;
+            transition: 2s ease-out;
+            opacity: 0;
+        }
+        #forma2::after{
+            content: 'Fine...I do it myself';
+            position: absolute;
+            width: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 3vw;
+            color: chocolate;
+            font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+            text-shadow: .1rem .1rem .1rem #333;
+            transition: 2s ease-out;
+            opacity: 0;
+        }
+        #forma3::after{
+            content: '4 8 15 16 23 42';
+            position: absolute;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 4vw;
+            color: chocolate;
+            font-family: 'IM Fell DW Pica', serif;    
+            font-weight: 70px;
+            text-shadow: .1rem .1rem .1rem #333;
+            transition: 2s ease-out;
+            opacity: 0;
+        }
+        #forma4::after{
+            content: url(../imgs/benice.jpg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 3vw;
+            color: chocolate;
+            font-family: 'IM Fell DW Pica', serif;    font-weight: 70px;
+            text-shadow: .1rem .1rem .1rem #333;
+            transition: 2s ease-out;
+            opacity: 0;
+        }
+    footer{
+        //ok
+    }
+}
+
+//========  media query- PANTALLA MEDIANA  =========
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    header{
+        //ok
+    }
+    main{
+        #ppal{
+            //ok
+        }
+        #sec{
+            #section1{
+                #videointro{
+                    transform: scale(0.7);
+                }
+            }
+            #section2{
+                #contenedor2{
+                    #presentacion{
+                        transform: translateX(-10vw);
+                        
+                        #divabout{
+                            padding-left: 2vw;
+                            p{
+                                width: 45vw;
+                                height: auto;
+                                
+                            }
+                            #parrafo1{
+                                font-size: 2em;
+
+                            }
+                            #parrafo2{
+                                // color: rgb(216, 216, 216);
+                                // font-style: none;
+                                font-size: 1em !important;
+                                // font-weight: 200;
+        
+                                // padding-top: 1rem;
+                                // padding-bottom: 1rem;
+                            }
+                            #parrafo3{
+                                // color: seagreen;
+                                font-size: 1em !important;
+                                // font-weight: 200;
+        
+                            }
+                        }
+                    }
+                    
+                    #imagen{
+                        transform: scale(0.7);
+                    }
+                }
+            
+            }
+        }
+    }
+    footer{
+        //ok
+    }
+} 
+//========  pantalla base h1440px w854
+
+//========  media query- PANTALLA 4k  =========
+
+@media only screen and (min-width: 2560px) {
+    header{
+        //ok
+    }
+    main{
+        #ppal{
+            //ok
+        }
+        #sec{
+            #section0{
+                #boni92{
+                    font-size: 2em;
+                }
+            }
+            #section1{
+                #videointro{
+                    transform: scale(2);
+                }
+            }
+            #section2{
+                #contenedor2{
+                    #presentacion{
+                        #divabout{
+                            p{
+                                width: 45vw;
+                                height: auto;
+                            }
+                            #parrafo1{
+                                color: seagreen;
+                                font-size: 3em;
+                                line-height: 5vh;
+
+                            }
+                            #parrafo2{
+                                color: rgb(216, 216, 216);
+                                font-style: none;
+                                font-size: 2em !important;
+                                font-weight: 200;
+        
+                                padding-top: 1rem;
+                                padding-bottom: 1rem;
+                            }
+                            #parrafo3{
+                                color: seagreen;
+                                font-size: 2em !important;
+                                font-weight: 200;
+        
+                            }
+                        }
+                    }
+                    
+                    #imagen{
+                        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+                        //position: absolute;
+                        z-index: -1;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            #section3{
+                //ok
+            }
+            #section4{
+                //ok
+            }
+        }
+    }
+
+    footer{
+        //ok
+
+    }
+} 
+

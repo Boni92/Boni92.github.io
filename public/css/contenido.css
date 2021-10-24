@@ -1,7 +1,7 @@
 header {
-  padding: 1vm; }
+  padding: 0; }
   header div nav a {
-    margin-left: 20px;
+    padding-left: 1em;
     display: inline-block;
     text-decoration: none; }
 
@@ -14,18 +14,18 @@ header {
 .menu {
   position: fixed;
   right: 2em;
-  top: 33em;
   z-index: 10;
   text-align: right;
-  transform: rotate(-90deg) translateX(100%);
-  transform-origin: bottom right;
-  font-size: 12px; }
+  transform: rotate(-90deg);
+  transform-origin: bottom right; }
 
 main {
-  color: blanchedalmond; }
+  color: blanchedalmond;
+  overflow-x: hidden; }
   main #ppal #sec-scr {
     height: 100vh;
     width: 100%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,10 @@ main {
       padding-top: 5vh; }
     main #sec #section1 {
       position: relative;
-      margin: 10vh 0 10vh 0; }
+      margin: 10vh 0 10vh 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
       main #sec #section1 #nombreintro {
         word-spacing: 1vw;
         letter-spacing: 0; }
@@ -46,23 +49,22 @@ main {
           main #sec #section1 #nombreintro #nicolas span {
             text-shadow: 0px 0px 55px black; }
         main #sec #section1 #nombreintro #borsari {
-          margin: 0px 0 0 180px;
+          margin: 0px 0 0 11vw;
           font-weight: 900;
           text-shadow: 0px 0px 55px black; }
-      main #sec #section1 #videointro {
-        position: absolute;
-        right: 10vw;
-        bottom: 5vh; }
     main #sec #section2 {
       padding: 3em 0 5em 0; }
       main #sec #section2 #contenedor2 {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
         main #sec #section2 #contenedor2 #presentacion {
-          padding-left: 60px; }
+          padding-left: 3vw; }
           main #sec #section2 #contenedor2 #presentacion #divabout p {
-            width: 600px;
-            height: auto; }
+            width: 40vw;
+            height: auto;
+            padding-right: 3vw; }
           main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
             color: seagreen; }
           main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
@@ -82,50 +84,54 @@ main {
     main #sec #section3 {
       padding: 5em 0 5em 0;
       padding-top: 3em; }
-      main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
-        margin: 2em 0 2em 0;
-        width: 50%;
-        position: relative; }
-      main #sec #section3 #divproyectos #proyectouno {
-        background: url(../imgs/section3/fondo1.jpg);
-        background-color: #cac6c6;
-        background-blend-mode: screen;
-        width: 1200px;
-        height: 500px;
-        border: none;
-        box-shadow: 0 0 10px 5px black; }
-      main #sec #section3 #divproyectos #proyectodos {
-        background: url(../imgs/section3/fondo2.jpg);
-        background-color: #959393;
-        background-blend-mode: screen;
-        width: 1200px;
-        height: 500px;
-        border: none;
-        box-shadow: 0 0 10px 5px black; }
-      main #sec #section3 #divproyectos div .bloquetexto {
-        position: absolute;
-        bottom: 50px;
-        left: 50px;
-        text-align: left; }
-      main #sec #section3 #divproyectos div span {
-        font-family: 'Heebo', sans-serif;
-        font-size: 50px;
-        text-transform: uppercase;
-        font-weight: 800 !important;
-        color: black; }
-      main #sec #section3 #divproyectos div p {
-        font-weight: 100px;
-        color: black; }
-      main #sec #section3 #divproyectos div a {
-        text-decoration: none;
-        color: white;
-        background: linear-gradient(270deg, #f67b7b -14%, #da3f24 100%);
-        padding: 14px 30px 14px 30px;
-        text-align: center;
-        font-family: 'Heebo', sans-serif;
-        font-size: 20px;
-        letter-spacing: 1px !important;
-        font-style: normal; }
+      main #sec #section3 #divproyectos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+          margin: 2vh 0 2vh 0;
+          position: relative; }
+        main #sec #section3 #divproyectos #proyectouno {
+          background: url(../imgs/section3/fondo1.jpg);
+          background-color: #cac6c6;
+          background-blend-mode: screen;
+          width: 85vw;
+          height: 500px;
+          border: none;
+          box-shadow: 0 0 10px 5px black; }
+        main #sec #section3 #divproyectos #proyectodos {
+          background: url(../imgs/section3/fondo2.jpg);
+          background-color: #959393;
+          background-blend-mode: screen;
+          width: 85vw;
+          height: 500px;
+          border: none;
+          box-shadow: 0 0 10px 5px black; }
+        main #sec #section3 #divproyectos div .bloquetexto {
+          position: absolute;
+          bottom: 50px;
+          left: 50px;
+          text-align: left; }
+        main #sec #section3 #divproyectos div span {
+          font-family: 'Heebo', sans-serif;
+          font-size: 50px;
+          text-transform: uppercase;
+          font-weight: 800 !important;
+          color: black; }
+        main #sec #section3 #divproyectos div p {
+          font-weight: 100px;
+          color: black; }
+        main #sec #section3 #divproyectos div a {
+          text-decoration: none;
+          color: white;
+          background: linear-gradient(270deg, #f67b7b -14%, #da3f24 100%);
+          padding: 14px 30px 14px 30px;
+          text-align: center;
+          font-family: 'Heebo', sans-serif;
+          font-size: 20px;
+          letter-spacing: 1px !important;
+          font-style: normal; }
     main #sec #section4 {
       padding: 5em 0 5em 0;
       padding-top: 3em; }
@@ -193,7 +199,7 @@ main {
 
 .textos {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 2rem;
+  font-size: 3vw;
   font-style: italic;
   line-height: 2.5rem; }
 
@@ -256,9 +262,9 @@ main {
   opacity: 1; }
 
 .imag_description {
-  font-size: 2em;
+  font-size: 4vh;
   text-align: left;
-  width: 70vw;
+  width: 65vw;
   height: auto;
   font-family: 'Open Sans Condensed', sans-serif; }
 
@@ -578,31 +584,639 @@ main {
     transform: translateX(0px); } }
 
 footer {
-  margin: 5vw;
-  padding: 1vm;
+  margin: 3vw;
+  margin-top: 0;
+  padding: 1vw;
+  padding-top: 0;
   color: blanchedalmond; }
   footer div div div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3em; }
+    justify-content: center; }
     footer div div div #divredes a {
       text-decoration: none;
-      margin: 5px 3px;
+      margin: 0.2vh 0.2vh;
+      padding-top: 5vh;
       color: chocolate;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+      footer div div div #divredes a img {
+        width: 2.5vw;
+        height: auto; }
       footer div div div #divredes a p {
-        font-size: 1.5em !important; }
-  footer div div #divtitulo, footer div div #divtitulofinal {
-    margin: 3em 0; }
+        font-size: 2.8vh; }
+  footer div div #divtitulofinal {
+    padding-top: 4vh; }
+  footer div div #divtitulo {
+    padding-bottom: 4vh; }
+
+@media only screen and (max-width: 319px) {
+  header {
+    padding: 0; }
+    header div nav a {
+      padding-left: 1vw;
+      display: inline-block;
+      text-decoration: none; }
+    header .colorclaro {
+      color: #c7c5c1 !important;
+      font-family: 'Roboto', sans-serif;
+      font-size: 3vw;
+      opacity: .7; }
+    header .menu {
+      position: fixed;
+      right: 3.5vw;
+      z-index: 10;
+      text-align: right;
+      transform: rotate(-90deg);
+      transform-origin: bottom right; }
+  main #sec #section0 #boni92 {
+    font-size: 3vw !important; }
+  main #sec #section1 {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0; }
+    main #sec #section1 #nombreintro #borsari {
+      margin: 0 0 0 0vw; }
+    main #sec #section1 #videointro {
+      transform: scale(0.7); }
+  main #sec #section2 {
+    padding-top: 0; }
+    main #sec #section2 #contenedor2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      main #sec #section2 #contenedor2 #presentacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        main #sec #section2 #contenedor2 #presentacion #divabout p {
+          width: 72vw;
+          height: auto;
+          text-align: justify; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+          font-size: 6vw;
+          line-height: 7vw; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+          font-size: 4vw !important; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+          font-size: 4vw !important; }
+      main #sec #section2 #contenedor2 #imagen {
+        transform: scale(0.8); }
+        main #sec #section2 #contenedor2 #imagen img {
+          width: 90vw;
+          height: 90vw; }
+  main #sec #section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main #sec #section3 #divproyectos .textos {
+      line-height: 4vw !important; }
+    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 80vw;
+      height: 40vw;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    main #sec #section3 div .bloquetexto {
+      position: unset;
+      bottom: 0;
+      left: 0;
+      text-align: center !important; }
+    main #sec #section3 div div #bloque {
+      margin-top: 14vw !important; }
+      main #sec #section3 div div #bloque span {
+        font-family: 'Heebo', sans-serif;
+        font-size: 5vw !important;
+        text-transform: uppercase;
+        font-weight: 800 !important;
+        color: black; }
+      main #sec #section3 div div #bloque p {
+        font-size: 4vw !important;
+        padding-top: 1vw;
+        font-weight: 600; }
+      main #sec #section3 div div #bloque div a {
+        padding: 1.5vw 3vw 1.5vw 3vw !important;
+        font-size: 2vw !important; }
+  main #sec #section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main #sec #section4 #divhistoria {
+      margin: 0; }
+      main #sec #section4 #divhistoria div #boton1, main #sec #section4 #divhistoria div #boton2, main #sec #section4 #divhistoria div #boton3, main #sec #section4 #divhistoria div #boton4, main #sec #section4 #divhistoria div #boton5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      main #sec #section4 #divhistoria div div #libros, main #sec #section4 #divhistoria div div #avion, main #sec #section4 #divhistoria div div #gif {
+        transform: translate(0%, 0%) !important; }
+    main #sec #section4 p {
+      width: 50vw; }
+    main #sec #section4 .anchof {
+      height: auto; }
+    main #sec #section4 .imag {
+      height: auto; }
+    main #sec #section4 .imag_img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      transform: translate(0%, 0%);
+      margin: 10vw 0 0 0; }
+    main #sec #section4 .imag_overlay {
+      position: relative;
+      align-items: center;
+      opacity: 1;
+      transition-property: unset; }
+    main #sec #section4 .imag:hover .imag_overlay {
+      transform: translateX(0px);
+      opacity: 1; }
+    main #sec #section4 .imag_description {
+      text-align: center;
+      margin: 0; }
+  .lineas {
+    width: 30%;
+    margin: auto;
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .lineas::after, .lineas::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    width: 65%;
+    top: 50%; }
+  .lineas::after {
+    left: -28vw; }
+  .lineas::before {
+    right: -28vw; }
+  #forma1::after {
+    content: 'Si se puede imaginar, se puede programar';
+    position: absolute;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma2::after {
+    content: 'Fine...I do it myself';
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma3::after {
+    content: '4 8 15 16 23 42';
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 6vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma4::after {
+    content: url(../imgs/benice.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 2s ease-out;
+    opacity: 0;
+    z-index: 50; }
+  footer .textos {
+    text-align: center;
+    font-size: 6vw; }
+  footer div div div #divredes a img {
+    width: 10vw;
+    height: auto; } }
+
+@media only screen and (min-width: 320px) and (max-width: 634.5px) {
+  header {
+    padding: 0; }
+    header div nav a {
+      padding-left: 1vw;
+      display: inline-block;
+      text-decoration: none; }
+  .colorclaro {
+    color: #c7c5c1 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    opacity: .7; }
+  .menu {
+    position: fixed;
+    right: 3.5vw;
+    z-index: 10;
+    text-align: right;
+    transform: rotate(-90deg);
+    transform-origin: bottom right; }
+  main #sec #section0 #boni92 {
+    font-size: 3vw !important; }
+  main #sec #section1 {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0; }
+    main #sec #section1 #nombreintro #borsari {
+      margin: 0 0 0 0vw; }
+    main #sec #section1 #videointro {
+      transform: scale(0.7); }
+  main #sec #section2 {
+    padding-top: 0; }
+    main #sec #section2 #contenedor2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      main #sec #section2 #contenedor2 #presentacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        main #sec #section2 #contenedor2 #presentacion #divabout p {
+          width: 72vw;
+          height: auto;
+          text-align: justify; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+          font-size: 6vw;
+          line-height: 7vw; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+          font-size: 4vw !important; }
+        main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+          font-size: 4vw !important; }
+      main #sec #section2 #contenedor2 #imagen {
+        transform: scale(0.8); }
+        main #sec #section2 #contenedor2 #imagen img {
+          width: 90vw;
+          height: 90vw; }
+  main #sec #section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main #sec #section3 #divproyectos .textos {
+      line-height: 4vw !important; }
+    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 80vw;
+      height: 40vw;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    main #sec #section3 div .bloquetexto {
+      position: unset;
+      bottom: 0;
+      left: 0;
+      text-align: center !important; }
+    main #sec #section3 div div #bloque {
+      margin-top: 14vw !important; }
+      main #sec #section3 div div #bloque span {
+        font-family: 'Heebo', sans-serif;
+        font-size: 5vw !important;
+        text-transform: uppercase;
+        font-weight: 800 !important;
+        color: black; }
+      main #sec #section3 div div #bloque p {
+        font-size: 4vw !important;
+        padding-top: 1vw;
+        font-weight: 600; }
+      main #sec #section3 div div #bloque div a {
+        padding: 1.5vw 3vw 1.5vw 3vw !important;
+        font-size: 2vw !important; }
+  main #sec #section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main #sec #section4 #divhistoria {
+      margin: 0; }
+      main #sec #section4 #divhistoria div #boton1, main #sec #section4 #divhistoria div #boton2, main #sec #section4 #divhistoria div #boton3, main #sec #section4 #divhistoria div #boton4, main #sec #section4 #divhistoria div #boton5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      main #sec #section4 #divhistoria div div #libros, main #sec #section4 #divhistoria div div #avion, main #sec #section4 #divhistoria div div #gif {
+        transform: translate(0%, 0%) !important; }
+    main #sec #section4 p {
+      width: 50vw; }
+    main #sec #section4 .anchof {
+      height: auto; }
+    main #sec #section4 .imag {
+      height: auto; }
+    main #sec #section4 .imag_img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      transform: translate(0%, 0%);
+      margin: 10vw 0 0 0; }
+    main #sec #section4 .imag_overlay {
+      position: relative;
+      align-items: center;
+      opacity: 1;
+      transition-property: unset; }
+    main #sec #section4 .imag:hover .imag_overlay {
+      transform: translateX(0px);
+      opacity: 1; }
+    main #sec #section4 .imag_description {
+      text-align: center;
+      margin: 0; }
+  .lineas {
+    width: 30%;
+    margin: auto;
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .lineas::after, .lineas::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    width: 65%;
+    top: 50%; }
+  .lineas::after {
+    left: -28vw; }
+  .lineas::before {
+    right: -28vw; }
+  #forma1::after {
+    content: 'Si se puede imaginar, se puede programar';
+    position: absolute;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma2::after {
+    content: 'Fine...I do it myself';
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma3::after {
+    content: '4 8 15 16 23 42';
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 6vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma4::after {
+    content: url(../imgs/benice.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 2s ease-out;
+    opacity: 0;
+    z-index: 50; }
+  footer .textos {
+    text-align: center;
+    font-size: 6vw; }
+  footer div div div #divredes a img {
+    width: 10vw;
+    height: auto; } }
+
+@media only screen and (min-width: 635px) and (max-width: 768px) {
+  header {
+    padding: 0; }
+    header div nav a {
+      padding-left: 1vw;
+      display: inline-block;
+      text-decoration: none; }
+  .colorclaro {
+    color: #c7c5c1 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vw;
+    opacity: .7; }
+  .menu {
+    position: fixed;
+    right: 3.5vw;
+    z-index: 10;
+    text-align: right;
+    transform: rotate(-90deg);
+    transform-origin: bottom right; }
+  main #sec #section1 #nombreintro #borsari {
+    margin: 0 0 0 0vw; }
+  main #sec #section1 #videointro {
+    transform: scale(0.5); }
+  main #sec #section2 #contenedor2 #presentacion {
+    transform: translateX(-20vw); }
+    main #sec #section2 #contenedor2 #presentacion #divabout {
+      padding-left: 2vw; }
+      main #sec #section2 #contenedor2 #presentacion #divabout p {
+        width: 40vw;
+        height: auto; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+        font-size: 3vw;
+        line-height: 3.5vw; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+        font-size: 1.8vw !important; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+        font-size: 1.8vw !important; }
+  main #sec #section2 #contenedor2 #imagen {
+    transform: scale(0.5); }
+    main #sec #section2 #contenedor2 #imagen img {
+      width: 75vw;
+      height: 75vw; }
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vw;
+    height: 40vw; }
+  main #sec #section3 div span {
+    font-family: 'Heebo', sans-serif;
+    font-size: 5vw !important;
+    text-transform: uppercase;
+    font-weight: 800 !important;
+    color: black; }
+  main #sec #section3 div a {
+    padding: 1.5vw 3vw 1.5vw 3vw !important;
+    font-size: 2vw !important; }
+  main #sec #section4 p {
+    width: 50vw; }
+  .lineas {
+    width: 60%;
+    margin: auto;
+    height: 70px;
+    position: relative; }
+  .lineas::after, .lineas::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    height: 2px;
+    background: #fff;
+    width: 55%;
+    top: 50%; }
+  .lineas::after {
+    left: -100px; }
+  .lineas::before {
+    right: -100px; }
+  #forma1::after {
+    content: 'Si se puede imaginar, se puede programar';
+    position: absolute;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 3vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma2::after {
+    content: 'Fine...I do it myself';
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 3vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma3::after {
+    content: '4 8 15 16 23 42';
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 4vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; }
+  #forma4::after {
+    content: url(../imgs/benice.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 3vw;
+    color: chocolate;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: 70px;
+    text-shadow: .1rem .1rem .1rem #333;
+    transition: 2s ease-out;
+    opacity: 0; } }
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  main #sec #section1 #videointro {
+    transform: scale(0.7); }
+  main #sec #section2 #contenedor2 #presentacion {
+    transform: translateX(-10vw); }
+    main #sec #section2 #contenedor2 #presentacion #divabout {
+      padding-left: 2vw; }
+      main #sec #section2 #contenedor2 #presentacion #divabout p {
+        width: 45vw;
+        height: auto; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+        font-size: 2em; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+        font-size: 1em !important; }
+      main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+        font-size: 1em !important; }
+  main #sec #section2 #contenedor2 #imagen {
+    transform: scale(0.7); } }
+
+@media only screen and (min-width: 2560px) {
+  main #sec #section0 #boni92 {
+    font-size: 2em; }
+  main #sec #section1 #videointro {
+    transform: scale(2); }
+  main #sec #section2 #contenedor2 #presentacion #divabout p {
+    width: 45vw;
+    height: auto; }
+  main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
+    color: seagreen;
+    font-size: 3em;
+    line-height: 5vh; }
+  main #sec #section2 #contenedor2 #presentacion #divabout #parrafo2 {
+    color: #d8d8d8;
+    font-style: none;
+    font-size: 2em !important;
+    font-weight: 200;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
+    color: seagreen;
+    font-size: 2em !important;
+    font-weight: 200; }
+  main #sec #section2 #contenedor2 #imagen {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    z-index: -1;
+    transform: scale(1.2); } }
 
 html {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   scroll-behavior: smooth; }
   html body {
     background: #141424; }

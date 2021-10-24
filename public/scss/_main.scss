@@ -9,10 +9,13 @@ main{
     //font-family: 'Anton', sans-serif;
     
     color: $seccolor;
+    overflow-x: hidden;
+
     #ppal{
         #sec-scr{
             height: 100vh;
             width: 100%;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -30,6 +33,9 @@ main{
         #section1{
             position: relative;
             margin: 10vh 0 10vh 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
             #nombreintro{
                 word-spacing: 1vw;
@@ -42,15 +48,15 @@ main{
 
                 }
                 #borsari{
-                    margin: 0px 0 0 180px;
+                    margin: 0px 0 0 11vw;
                     font-weight: 900;
                     text-shadow: 0px 0px 55px rgb(0, 0, 0);
                 }
             }
             #videointro{
-                position: absolute;
-                right: 10vw;
-                bottom: 5vh;
+                // position: absolute;
+                // right: 10vw;
+                // bottom: 5vh;
             }
         }
         #section2{
@@ -58,13 +64,16 @@ main{
             #contenedor2{
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
+                align-items: center;
                 #presentacion{
-                    padding-left: 60px;
+                    padding-left: 3vw;
                     #divabout{
                         
                         p{
-                            width: 600px;
+                            width: 40vw;
                             height: auto;
+                            padding-right: 3vw;
 
                         }
                         #parrafo1{
@@ -100,16 +109,19 @@ main{
             padding-top: 3em;
             #divproyectos{
                 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 #proyectouno, #proyectodos{
-                    margin: 2em 0 2em 0;
-                    width: 50%;
+                    margin: 2vh 0 2vh 0;
                     position: relative;
                 }
                 #proyectouno{
                     background: url(../imgs/section3/fondo1.jpg); //1200px-500px
                     background-color: rgb(202, 198, 198);
                     background-blend-mode: screen;
-                    width: 1200px;
+                    width: 85vw;
                     height: 500px;
                     border: none;
                     box-shadow: 0 0 10px 5px black;
@@ -118,7 +130,7 @@ main{
                     background: url(../imgs/section3/fondo2.jpg); //1200px-536px
                     background-color: rgb(149, 147, 147);
                     background-blend-mode: screen;
-                    width: 1200px;
+                    width: 85vw;
                     height: 500px;
                     border: none;
                     box-shadow: 0 0 10px 5px black;
@@ -188,9 +200,7 @@ main{
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            #icono{
-                                
-                            }
+                            
                         }
                     }
                 }
@@ -258,7 +268,7 @@ main{
 }
 .textos{
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 2rem;
+    font-size: 3vw;
     font-style: italic;
     line-height: 2.5rem;
 }
@@ -359,12 +369,11 @@ main{
     opacity: 1;
 }
 .imag_description{
-    font-size: 2em;
+    font-size: 4vh;
     text-align: left;
-    width: 70vw;
+    width: 65vw;
     height: auto;
     font-family: 'Open Sans Condensed', sans-serif;
-
 
 }
 .contenedorimg{
