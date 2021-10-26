@@ -577,6 +577,7 @@ main{
 #forma3::after{
     content: '4 8 15 16 23 42';
     position: absolute;
+    width: 100vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
