@@ -78,6 +78,22 @@ main {
             color: seagreen;
             font-size: 1.2rem !important;
             font-weight: 100; }
+          main #sec #section2 #contenedor2 #presentacion #divabout #parrafo4 {
+            color: #d8d8d8;
+            font-style: none;
+            font-size: 1.2rem !important;
+            font-weight: 100;
+            padding-top: 1rem;
+            padding-bottom: 1rem; }
+          main #sec #section2 #contenedor2 #presentacion #divabout div {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            main #sec #section2 #contenedor2 #presentacion #divabout div #logosass, main #sec #section2 #contenedor2 #presentacion #divabout div #logogithub {
+              transform: translateX(-15px); }
+            main #sec #section2 #contenedor2 #presentacion #divabout div #logogit {
+              transform: translateX(-31px); }
         main #sec #section2 #contenedor2 #imagen {
           clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
           z-index: -1; }
