@@ -22,19 +22,13 @@ header {
 main {
   color: blanchedalmond;
   overflow-x: hidden; }
-  main #ppal #sec-scr {
-    height: 100vh;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  main #ppal {
     position: relative; }
   main #sec {
     margin: 5vw;
     padding: 1vm; }
     main #sec #section0 {
-      padding-top: 5vh; }
+      padding-top: 0vh; }
     main #sec #section1 {
       position: relative;
       margin: 10vh 0 10vh 0;
@@ -43,15 +37,28 @@ main {
       align-items: center; }
       main #sec #section1 #nombreintro {
         word-spacing: 1vw;
-        letter-spacing: 0; }
+        letter-spacing: 0;
+        cursor: pointer; }
         main #sec #section1 #nombreintro #nicolas {
           font-weight: 900; }
-          main #sec #section1 #nombreintro #nicolas span {
-            text-shadow: 0px 0px 55px black; }
+          main #sec #section1 #nombreintro #nicolas p {
+            display: inline-block; }
         main #sec #section1 #nombreintro #borsari {
           margin: 0px 0 0 11vw;
-          font-weight: 900;
-          text-shadow: 0px 0px 55px black; }
+          font-weight: 900; }
+          main #sec #section1 #nombreintro #borsari p {
+            display: inline-block; }
+        main #sec #section1 #nombreintro .sombra {
+          text-shadow: -0.06em 0 0px #19fff3;
+          color: #EE1D52; }
+        main #sec #section1 #nombreintro .chica {
+          font-size: 8vw;
+          font-weight: 300px; }
+      main #sec #section1 #videointro .box {
+        transition: transform 1s;
+        cursor: pointer; }
+      main #sec #section1 #videointro:hover {
+        transform: scale(1.1); }
     main #sec #section2 {
       padding: 3em 0 5em 0; }
       main #sec #section2 #contenedor2 {
@@ -104,50 +111,76 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        --parentwidth:85vw;
+        --parentheight:35vw; }
         main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
           margin: 2vh 0 2vh 0;
-          position: relative; }
-        main #sec #section3 #divproyectos #proyectouno {
-          background: url(../imgs/section3/fondo1.jpg);
-          background-color: #cac6c6;
-          background-blend-mode: screen;
-          width: 85vw;
-          height: 500px;
+          position: relative;
+          width: var(--parentwidth);
+          height: var(--parentheight);
           border: none;
           box-shadow: 0 0 10px 5px black; }
+        main #sec #section3 #divproyectos #proyectouno {
+          background: url(../imgs/section3/fondo1.jpg);
+          background-blend-mode: screen;
+          background-size: cover;
+          background-repeat: no-repeat; }
         main #sec #section3 #divproyectos #proyectodos {
           background: url(../imgs/section3/fondo2.jpg);
           background-color: #959393;
           background-blend-mode: screen;
-          width: 85vw;
-          height: 500px;
-          border: none;
-          box-shadow: 0 0 10px 5px black; }
+          background-size: cover;
+          background-repeat: no-repeat; }
         main #sec #section3 #divproyectos div .bloquetexto {
           position: absolute;
-          bottom: 50px;
-          left: 50px;
-          text-align: left; }
-        main #sec #section3 #divproyectos div span {
-          font-family: 'Heebo', sans-serif;
-          font-size: 50px;
-          text-transform: uppercase;
-          font-weight: 800 !important;
-          color: black; }
-        main #sec #section3 #divproyectos div p {
-          font-weight: 100px;
-          color: black; }
-        main #sec #section3 #divproyectos div a {
-          text-decoration: none;
-          color: white;
-          background: linear-gradient(270deg, #f67b7b -14%, #da3f24 100%);
-          padding: 14px 30px 14px 30px;
-          text-align: center;
-          font-family: 'Heebo', sans-serif;
-          font-size: 20px;
-          letter-spacing: 1px !important;
-          font-style: normal; }
+          bottom: calc(var(--parentheight)*0.05);
+          left: calc(var(--parentwidth)*0.02);
+          top: calc(var(--parentheight)*0.05);
+          right: calc(var(--parentwidth)*0.02);
+          text-align: left;
+          background: rgba(255, 255, 255, 0.719);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end; }
+        main #sec #section3 #divproyectos div div {
+          transform: translateX(30vw);
+          opacity: 0;
+          transition: all .5s; }
+          main #sec #section3 #divproyectos div div div {
+            transform: translate(-30vw);
+            opacity: 0;
+            transition: all .5s; }
+            main #sec #section3 #divproyectos div div div span {
+              font-family: 'Heebo', sans-serif;
+              font-size: 50px;
+              text-transform: uppercase;
+              font-weight: 800 !important;
+              color: black;
+              margin-left: calc(var(--parentwidth)*0.01); }
+            main #sec #section3 #divproyectos div div div p {
+              font-weight: 100px;
+              color: black;
+              margin-left: calc(var(--parentwidth)*0.01); }
+            main #sec #section3 #divproyectos div div div div a {
+              text-decoration: none;
+              color: white;
+              background: linear-gradient(270deg, #f67b7b -14%, #da3f24 100%);
+              margin: 10px 20px 10px 20px;
+              padding: 10px 20px 10px 20px;
+              text-align: center;
+              font-family: 'Heebo', sans-serif;
+              font-size: 20px;
+              letter-spacing: 1px !important;
+              font-style: normal; }
+        main #sec #section3 #divproyectos div:hover div div {
+          transform: translate(0, -1vh);
+          opacity: 1;
+          overflow: hidden; }
+        main #sec #section3 #divproyectos div:hover div {
+          transform: translateX(0);
+          opacity: 1;
+          overflow: hidden; }
     main #sec #section4 {
       padding: 5em 0 5em 0;
       padding-top: 3em; }
@@ -156,30 +189,24 @@ main {
         main #sec #section4 #divhistoria p {
           margin-bottom: 0;
           margin-left: .5em; }
-    main #sec div div div div div {
-      height: 50px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
 
 .scroll-down {
   height: 50px;
   width: 30px;
-  border: 2px solid white;
+  border: 2px solid #EE1D52;
   position: absolute;
+  transform: translate(0vw, 3vh);
   left: 50%;
-  bottom: 50%;
+  bottom: 1%;
   border-radius: 50px;
   cursor: pointer; }
 
-.scroll-down::before,
-.scroll-down::after {
+.scroll-down::before, .scroll-down::after {
   content: '';
   position: absolute;
   top: 20%;
   left: 50%;
-  border: 2px solid white;
+  border: 2px solid #19fff3;
   height: 10px;
   width: 10px;
   transform: translate(-50%, -90%) rotate(45deg);
