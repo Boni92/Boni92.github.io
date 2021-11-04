@@ -102,8 +102,13 @@ main {
             main #sec #section2 #contenedor2 #presentacion #divabout div #logogit {
               transform: translateX(-31px); }
         main #sec #section2 #contenedor2 #imagen {
-          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-          z-index: -1; }
+          opacity: 0.5;
+          transition: 0.5s ease; }
+          main #sec #section2 #contenedor2 #imagen img {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); }
+        main #sec #section2 #contenedor2 #imagen:hover {
+          opacity: 0.9;
+          cursor: pointer; }
     main #sec #section3 {
       padding: 5em 0 5em 0;
       padding-top: 3em; }
@@ -242,9 +247,9 @@ main {
 
 .textos {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-style: italic;
-  line-height: 2.5rem; }
+  line-height: 3.2rem; }
 
 .contieneimg {
   width: 300px;
