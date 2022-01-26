@@ -299,7 +299,7 @@ main{
                 
                 --parentwidth:85vw; //0.85*1440px=    1224px
                 --parentheight:35vw; // 0.35*1440px=   504px
-                #proyectouno, #proyectodos{
+                #proyectouno, #proyectodos, #proyectotres{
                     margin: 2vh 0 2vh 0;
                     position: relative;
                     width: var(--parentwidth);
@@ -316,10 +316,18 @@ main{
                 }
                 #proyectodos{
                     background: url(../imgs/section3/sunny2_opt.jpg); //1200px-536px
-                    background-color: rgb(149, 147, 147);
+                    // background-color: rgb(149, 147, 147);
                     background-blend-mode: screen;
                     background-size: cover;
                     background-repeat: no-repeat;
+                }
+                #proyectotres{
+                    background: url(../imgs/section3/Pizza_opt.jpg); //1200px-536px
+                    // background-color: rgb(149, 147, 147);
+                    background-blend-mode: screen;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    // background-position: 0 -60px;
                 }
                 div{
                     .bloquetexto{

@@ -208,7 +208,7 @@ main {
         align-items: center;
         --parentwidth:85vw;
         --parentheight:35vw; }
-        main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+        main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
           margin: 2vh 0 2vh 0;
           position: relative;
           width: var(--parentwidth);
@@ -222,7 +222,11 @@ main {
           background-repeat: no-repeat; }
         main #sec #section3 #divproyectos #proyectodos {
           background: url(../imgs/section3/sunny2_opt.jpg);
-          background-color: #959393;
+          background-blend-mode: screen;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        main #sec #section3 #divproyectos #proyectotres {
+          background: url(../imgs/section3/Pizza_opt.jpg);
           background-blend-mode: screen;
           background-size: cover;
           background-repeat: no-repeat; }
