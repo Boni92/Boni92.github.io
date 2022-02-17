@@ -121,12 +121,12 @@
                     .textos{
                         line-height: 4vw !important;
                     }
-                    #proyectouno, #proyectodos{
+                    #proyectouno, #proyectodos, #proyectotres{
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                         width: 80vw;
-                        height: 40vw;
+                        height: 20vw;
     
                         display: flex;
                         justify-content:center;
@@ -422,7 +422,7 @@ main{
                             width: 40vw*1.8;
                             height: auto;
                             text-align: justify;
-                            
+                            margin: auto;       
                         }
                         #parrafo1{
                             font-size: 3vw*2;
@@ -444,6 +444,19 @@ main{
                             // font-weight: 200;
     
                         }
+                        .herramientas{
+                            width: 100%;
+                            margin: auto;
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform: scale(0.5) !important;
+                            img{
+                                margin-left: 15px;
+                            }
+                            
+                        }
                     }
                 }
                 
@@ -455,6 +468,7 @@ main{
                     }
                 }
             }
+            
         
         }
         #section3{
@@ -465,13 +479,14 @@ main{
             #divproyectos{
                 .textos{
                     line-height: 4vw !important;
+                    position: relative;
                 }
-                #proyectouno, #proyectodos{
+                #proyectouno, #proyectodos, #proyectotres{
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
                     width: 80vw;
-                    height: 40vw;
+                    height: 20vw;
 
                     display: flex;
                     justify-content:center;
@@ -482,40 +497,19 @@ main{
             }
             div{
                 .bloquetexto{
-                    position: unset;
+                    position: absolute;
                     bottom: 0;
                     left: 0;
                     text-align: center !important;
-                    
 
                 }
                 div{
                     
-                    #bloque{
-                        margin-top: 14vw !important;
-
-
-                        span{
-                            font-family: 'Heebo', sans-serif;
-                            //font-family: 'Work Sans', sans-serif;
-                            font-size: 5vw !important;
-                            text-transform: uppercase;
-                            font-weight: 800 !important;
-                            color: rgb(0, 0, 0);
-                        }
+                    #bloqueuno, #bloquedos, #bloquetres{
+                        padding-top: 15px !important;
                         p{
-                            font-size: 4vw !important;
-                            padding-top: 1vw;
-                            font-weight: 600;
+                            margin-bottom: 10px !important;
                         }
-                        div{
-                            a{
-                                padding: 1.5vw 3vw 1.5vw 3vw !important;
-                                font-size: 2vw !important;
-                            }
-                        }
-                        
-                        
                     }
                 }
             }
@@ -783,16 +777,18 @@ footer{
             }
             #section3{
                 #divproyectos{
-                    #proyectouno, #proyectodos{
+                    #proyectouno, #proyectodos, #proyectotres{
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                         width: 80vw;
-                        height: 40vw;
+                        height: 20vw;
 
+                        
                     }
                 }
                 div{
+                    line-height: 30px !important;
                     span{
                         font-family: 'Heebo', sans-serif;
                         //font-family: 'Work Sans', sans-serif;
@@ -800,14 +796,28 @@ footer{
                         text-transform: uppercase;
                         font-weight: 800 !important;
                         color: rgb(0, 0, 0);
+                        padding: 0;
+                        padding-top: 15px !important;
+                        
                     }
-                    a{
-                        padding: 1.5vw 3vw 1.5vw 3vw !important;
-                        font-size: 2vw !important;
-
-
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        margin-left: 7px !important;
 
                     }
+                    div{
+                        margin-top: 10px !important;
+                        a{
+                            // padding: 1.5vw 3vw 1.5vw 3vw !important;
+                            font-size: 2vw !important;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        div{
+                            padding-top: 3px;
+                        }
+                    }    
                 }
             }
             #section4{
@@ -903,7 +913,7 @@ footer{
 
 //========  media query- PANTALLA MEDIANA  =========
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
     header{
         //ok
     }
@@ -913,6 +923,22 @@ footer{
         }
         #sec{
             #section1{
+                #nombreintro{
+                    margin: 0;
+                    #nicolas{
+                        p{
+                            display: inline-block;
+                        }
+    
+                    }
+                    #borsari{
+                        margin: 0px;
+                        font-weight: 900;
+                        p{
+                            display: inline-block;
+                        }
+                    }
+                }
                 #videointro{
                     transform: scale(1);
                 }
@@ -956,6 +982,51 @@ footer{
                     }
                 }
             
+            }
+            #section3{
+                #divproyectos{
+                    #proyectouno, #proyectodos, #proyectotres{
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 80vw;
+                        height: 20vw;
+
+                        
+                    }
+                }
+                div{
+                    line-height: 30px !important;
+                    span{
+                        font-family: 'Heebo', sans-serif;
+                        //font-family: 'Work Sans', sans-serif;
+                        font-size: 5vw !important;
+                        text-transform: uppercase;
+                        font-weight: 800 !important;
+                        color: rgb(0, 0, 0);
+                        padding: 0;
+                        padding-top: 15px !important;
+                        
+                    }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        margin-left: 7px !important;
+
+                    }
+                    div{
+                        margin-top: 10px !important;
+                        a{
+                            // padding: 1.5vw 3vw 1.5vw 3vw !important;
+                            font-size: 2vw !important;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        div{
+                            padding-top: 3px;
+                        }
+                    }    
+                }
             }
         }
     }
@@ -1027,7 +1098,7 @@ footer{
                 }
             }
             #section3{
-                //ok
+                
             }
             #section4{
                 //ok

@@ -207,7 +207,7 @@ main {
         justify-content: center;
         align-items: center;
         --parentwidth:85vw;
-        --parentheight:35vw; }
+        --parentheight:15vw; }
         main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
           margin: 2vh 0 2vh 0;
           position: relative;
@@ -218,16 +218,19 @@ main {
         main #sec #section3 #divproyectos #proyectouno {
           background: url(../imgs/section3/fondo1.jpg);
           background-blend-mode: screen;
+          background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         main #sec #section3 #divproyectos #proyectodos {
           background: url(../imgs/section3/sunny2_opt.jpg);
           background-blend-mode: screen;
+          background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         main #sec #section3 #divproyectos #proyectotres {
           background: url(../imgs/section3/Pizza_opt.jpg);
           background-blend-mode: screen;
+          background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         main #sec #section3 #divproyectos div .bloquetexto {
@@ -248,7 +251,8 @@ main {
           main #sec #section3 #divproyectos div div div {
             transform: translate(-30vw);
             opacity: 0;
-            transition: all .5s; }
+            transition: all .5s;
+            padding-top: 10px !important; }
             main #sec #section3 #divproyectos div div div span {
               font-family: 'Heebo', sans-serif;
               font-size: 3vw;
@@ -259,7 +263,8 @@ main {
             main #sec #section3 #divproyectos div div div p {
               font-weight: 100px;
               color: black;
-              margin-left: calc(var(--parentwidth)*0.01); }
+              margin-left: calc(var(--parentwidth)*0.01);
+              margin-bottom: 0 !important; }
             main #sec #section3 #divproyectos div div div div a {
               text-decoration: none;
               color: white;
@@ -347,9 +352,10 @@ main {
 
 .contieneimg {
   width: 300px;
-  height: 400px;
-  background: url(../imgs/section1/portada.jpg);
-  box-shadow: inset 0 0 15px 10px whitesmoke, 0 0 15px 16px #011a2a; }
+  height: 300px;
+  background: url(../imgs/section1/Captura2.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .animadoX, .animadoXd {
   opacity: 0;
@@ -820,12 +826,12 @@ footer {
     align-items: center; }
     main #sec #section3 #divproyectos .textos {
       line-height: 4vw !important; }
-    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       width: 80vw;
-      height: 40vw;
+      height: 20vw;
       display: flex;
       justify-content: center;
       align-items: center; }
@@ -1011,7 +1017,8 @@ footer {
         main #sec #section2 #contenedor2 #presentacion #divabout p {
           width: 72vw;
           height: auto;
-          text-align: justify; }
+          text-align: justify;
+          margin: auto; }
         main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
           font-size: 6vw;
           line-height: 7vw; }
@@ -1019,6 +1026,16 @@ footer {
           font-size: 4vw !important; }
         main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
           font-size: 4vw !important; }
+        main #sec #section2 #contenedor2 #presentacion #divabout .herramientas {
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: scale(0.5) !important; }
+          main #sec #section2 #contenedor2 #presentacion #divabout .herramientas img {
+            margin-left: 15px; }
       main #sec #section2 #contenedor2 #imagen {
         transform: scale(0.8); }
         main #sec #section2 #contenedor2 #imagen img {
@@ -1030,36 +1047,26 @@ footer {
     justify-content: center;
     align-items: center; }
     main #sec #section3 #divproyectos .textos {
-      line-height: 4vw !important; }
-    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+      line-height: 4vw !important;
+      position: relative; }
+    main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       width: 80vw;
-      height: 40vw;
+      height: 20vw;
       display: flex;
       justify-content: center;
       align-items: center; }
     main #sec #section3 div .bloquetexto {
-      position: unset;
+      position: absolute;
       bottom: 0;
       left: 0;
       text-align: center !important; }
-    main #sec #section3 div div #bloque {
-      margin-top: 14vw !important; }
-      main #sec #section3 div div #bloque span {
-        font-family: 'Heebo', sans-serif;
-        font-size: 5vw !important;
-        text-transform: uppercase;
-        font-weight: 800 !important;
-        color: black; }
-      main #sec #section3 div div #bloque p {
-        font-size: 4vw !important;
-        padding-top: 1vw;
-        font-weight: 600; }
-      main #sec #section3 div div #bloque div a {
-        padding: 1.5vw 3vw 1.5vw 3vw !important;
-        font-size: 2vw !important; }
+    main #sec #section3 div div #bloqueuno, main #sec #section3 div div #bloquedos, main #sec #section3 div div #bloquetres {
+      padding-top: 15px !important; }
+      main #sec #section3 div div #bloqueuno p, main #sec #section3 div div #bloquedos p, main #sec #section3 div div #bloquetres p {
+        margin-bottom: 10px !important; }
   main #sec #section4 {
     display: flex;
     flex-direction: column;
@@ -1220,21 +1227,34 @@ footer {
     main #sec #section2 #contenedor2 #imagen img {
       width: 75vw;
       height: 75vw; }
-  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos {
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 80vw;
-    height: 40vw; }
-  main #sec #section3 div span {
-    font-family: 'Heebo', sans-serif;
-    font-size: 5vw !important;
-    text-transform: uppercase;
-    font-weight: 800 !important;
-    color: black; }
-  main #sec #section3 div a {
-    padding: 1.5vw 3vw 1.5vw 3vw !important;
-    font-size: 2vw !important; }
+    height: 20vw; }
+  main #sec #section3 div {
+    line-height: 30px !important; }
+    main #sec #section3 div span {
+      font-family: 'Heebo', sans-serif;
+      font-size: 5vw !important;
+      text-transform: uppercase;
+      font-weight: 800 !important;
+      color: black;
+      padding: 0;
+      padding-top: 15px !important; }
+    main #sec #section3 div p {
+      margin: 0;
+      padding: 0;
+      margin-left: 7px !important; }
+    main #sec #section3 div div {
+      margin-top: 10px !important; }
+      main #sec #section3 div div a {
+        font-size: 2vw !important;
+        margin: 0;
+        padding: 0; }
+      main #sec #section3 div div div {
+        padding-top: 3px; }
   main #sec #section4 p {
     width: 50vw; }
   .lineas {
@@ -1310,7 +1330,16 @@ footer {
     transition: 2s ease-out;
     opacity: 0; } }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  main #sec #section1 #nombreintro {
+    margin: 0; }
+    main #sec #section1 #nombreintro #nicolas p {
+      display: inline-block; }
+    main #sec #section1 #nombreintro #borsari {
+      margin: 0px;
+      font-weight: 900; }
+      main #sec #section1 #nombreintro #borsari p {
+        display: inline-block; }
   main #sec #section1 #videointro {
     transform: scale(1); }
   main #sec #section2 #contenedor2 #presentacion {
@@ -1327,7 +1356,35 @@ footer {
       main #sec #section2 #contenedor2 #presentacion #divabout #parrafo3 {
         font-size: 1em !important; }
   main #sec #section2 #contenedor2 #imagen {
-    transform: scale(0.7); } }
+    transform: scale(0.7); }
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vw;
+    height: 20vw; }
+  main #sec #section3 div {
+    line-height: 30px !important; }
+    main #sec #section3 div span {
+      font-family: 'Heebo', sans-serif;
+      font-size: 5vw !important;
+      text-transform: uppercase;
+      font-weight: 800 !important;
+      color: black;
+      padding: 0;
+      padding-top: 15px !important; }
+    main #sec #section3 div p {
+      margin: 0;
+      padding: 0;
+      margin-left: 7px !important; }
+    main #sec #section3 div div {
+      margin-top: 10px !important; }
+      main #sec #section3 div div a {
+        font-size: 2vw !important;
+        margin: 0;
+        padding: 0; }
+      main #sec #section3 div div div {
+        padding-top: 3px; } }
 
 @media only screen and (min-width: 2560px) {
   main #sec #section0 #boni92 {
