@@ -5,7 +5,6 @@ main{
     //font-family: 'BioRhyme', serif;
     //font-family: 'Nunito', sans-serif;
     //font-family: 'Anton', sans-serif;
-    
     color: $seccolor;
     overflow-x: hidden;
     #ppal{
@@ -276,6 +275,7 @@ main{
                     transition: 0.5s ease;
                     img{
                         clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+                        object-fit: cover;
                     }
                 }
                 #imagen:hover{
@@ -296,7 +296,7 @@ main{
                 
                 --parentwidth:85vw; //0.85*1440px=    1224px
                 --parentheight:15vw; // 0.35*1440px=   504px
-                #proyectouno, #proyectodos, #proyectotres{
+                #proyectouno, #proyectodos, #proyectotres, #proyectocuatro, #proyectocinco{
                     margin: 2vh 0 2vh 0;
                     position: relative;
                     width: var(--parentwidth);
@@ -322,6 +322,22 @@ main{
                 }
                 #proyectotres{
                     background: url(../imgs/section3/Pizza_opt.jpg); //1200px-536px
+                    // background-color: rgb(149, 147, 147);
+                    background-blend-mode: screen;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                #proyectocuatro{
+                    background: url(../imgs/section3/francis.jpg); //1200px-536px
+                    // background-color: rgb(149, 147, 147);
+                    background-blend-mode: screen;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                #proyectocinco{
+                    background: url(../imgs/section3/gob.jpg); //1200px-536px
                     // background-color: rgb(149, 147, 147);
                     background-blend-mode: screen;
                     background-position: center;
@@ -700,7 +716,7 @@ main{
 
 }
 #forma1::after{
-    content: 'Si se puede imaginar, se puede programar';
+    content: 'If you can dream it, you can code it.';
     position: absolute;
     width: 300px;
     top: 50%;

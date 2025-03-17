@@ -24,6 +24,7 @@ header div nav a {
 }
 
 main {
+  background-color: #e91e2f;
   color: blanchedalmond;
   overflow-x: hidden;
 }
@@ -247,8 +248,10 @@ main #sec #section2 #contenedor2 #imagen {
   transition: 0.5s ease;
 }
 main #sec #section2 #contenedor2 #imagen img {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-  object-fit: cover;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #sec #section2 #contenedor2 #imagen:hover {
   opacity: 0.9;
@@ -266,7 +269,7 @@ main #sec #section3 #divproyectos {
   --parentwidth:85vw;
   --parentheight:15vw;
 }
-main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres, main #sec #section3 #divproyectos #proyectocuatro, main #sec #section3 #divproyectos #proyectocinco {
+main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
   margin: 2vh 0 2vh 0;
   position: relative;
   width: var(--parentwidth);
@@ -290,20 +293,6 @@ main #sec #section3 #divproyectos #proyectodos {
 }
 main #sec #section3 #divproyectos #proyectotres {
   background: url(../imgs/section3/Pizza_opt.jpg);
-  background-blend-mode: screen;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-main #sec #section3 #divproyectos #proyectocuatro {
-  background: url(../imgs/section3/francis.jpg);
-  background-blend-mode: screen;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-main #sec #section3 #divproyectos #proyectocinco {
-  background: url(../imgs/section3/gob.jpg);
   background-blend-mode: screen;
   background-position: center;
   background-size: cover;
@@ -627,7 +616,7 @@ main #sec #section4 #divhistoria p {
 }
 
 #forma1::after {
-  content: "If you can dream it, you can code it.";
+  content: "Si se puede imaginar, se puede programar";
   position: absolute;
   width: 300px;
   top: 50%;
@@ -982,6 +971,7 @@ footer div div #divtitulo {
   main #sec #section2 #contenedor2 #presentacion #divabout p {
     width: 72vw;
     height: auto;
+    text-align: justify;
   }
   main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
     font-size: 6vw;
@@ -1009,7 +999,7 @@ footer div div #divtitulo {
   main #sec #section3 #divproyectos .textos {
     line-height: 4vw !important;
   }
-  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres, main #sec #section3 #divproyectos #proyectocuatro, main #sec #section3 #divproyectos #proyectocinco {
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1238,6 +1228,7 @@ footer div div #divtitulo {
   main #sec #section2 #contenedor2 #presentacion #divabout p {
     width: 72vw;
     height: auto;
+    text-align: justify;
     margin: auto;
   }
   main #sec #section2 #contenedor2 #presentacion #divabout #parrafo1 {
@@ -1279,7 +1270,7 @@ footer div div #divtitulo {
     line-height: 4vw !important;
     position: relative;
   }
-  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres, main #sec #section3 #divproyectos #proyectocuatro, main #sec #section3 #divproyectos #proyectocinco {
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1377,7 +1368,7 @@ footer div div #divtitulo {
     right: -28vw;
   }
   #forma1::after {
-    content: "If you can dream it, you can code it.";
+    content: "Si se puede imaginar, se puede programar";
     position: absolute;
     width: 150px;
     top: 50%;
@@ -1496,7 +1487,7 @@ footer div div #divtitulo {
     width: 75vw;
     height: 100vw;
   }
-  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres, main #sec #section3 #divproyectos #proyectocuatro, main #sec #section3 #divproyectos #proyectocinco {
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1556,7 +1547,7 @@ footer div div #divtitulo {
     right: -100px;
   }
   #forma1::after {
-    content: "If you can dream it, you can code it.";
+    content: "Si se puede imaginar, se puede programar";
     position: absolute;
     width: 150px;
     top: 50%;
@@ -1654,7 +1645,7 @@ footer div div #divtitulo {
   main #sec #section2 #contenedor2 #imagen {
     transform: scale(0.7);
   }
-  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres, main #sec #section3 #divproyectos #proyectocuatro, main #sec #section3 #divproyectos #proyectocinco {
+  main #sec #section3 #divproyectos #proyectouno, main #sec #section3 #divproyectos #proyectodos, main #sec #section3 #divproyectos #proyectotres {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1720,7 +1711,8 @@ footer div div #divtitulo {
     font-weight: 200;
   }
   main #sec #section2 #contenedor2 #imagen {
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     z-index: -1;
     transform: scale(1.2);
   }
@@ -1733,5 +1725,3 @@ html {
 html body {
   background: radial-gradient(ellipse at bottom, #01395c, #111);
 }
-
-/*# sourceMappingURL=contenido.css.map */
