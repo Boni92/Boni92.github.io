@@ -1,0 +1,16 @@
+$header-height: 60px;
+
+.header {
+    height: $header-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: $sidebar-width;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
