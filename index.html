@@ -6,40 +6,515 @@
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/brands.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/regular.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/solid.css">
+    <link rel="stylesheet" href="assets/fontawesome/fontawesome-free-6.7.2-web/css/">
+    
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid ">
+        <div class="row " >
             <!-- Sidebar Fijo -->
-            <aside class="col-md-3 col-lg-2 sidebar">
+            <aside class=" sidebar">
                 <div class="sidebar-content">
-                    <div class="box">Div 1</div>
-                    <div class="box">Div 2</div>
-                    <div class="box">Div 3</div>
-                    <div class="box">Div 4</div>
+                    <div class="box d-flex justify-content-center align-items-center">
+                        <img src="assets/logo.png" alt="logo" class="logo">
+                        <h2>Nicolas Borsari</h2>
+                    </div>
+                    <div class="box">
+                        <img src="assets/3.JPG" alt="" class="img-personal">
+                    </div>
+                    <div class="box">
+                        <p>A que me dedico</p>
+                        <h3>Desarrollador Web</h3>
+                    </div>
+                    <div class="box">
+                        <p>Ubicación actual</p>
+                        <h3>Argentina</h3> 
+                    </div>
+                    <div class="box redes">
+                        <div class="redes-btns">
+                            <a href="https://www.instagram.com/nicoborsari" target="_blank"><img src="assets/logos/ins.png" alt="instagram"></a>
+                            <a href="https://www.linkedin.com/in/bonilifecoaching/" target="_blank"><img src="assets/logos/lk.png" alt="linkedin"></a>
+                            <a href="#" onclick="scrollToSection('sec3'); return false;"><img src="assets/logos/mail.png" alt="mail"></a>
+                        </div>
+                        <button onclick="scrollToSection('sec6')">Let's work together!</button>
+                    </div>
                 </div>
             </aside>
 
             <!-- Contenido Principal -->
-            <div class="col-md-9 col-lg-10 main-content">
+            <div class="main-content">
                 <header class="header">
-                    <h1>Mi Portafolio</h1>
+                    <div class="menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <nav class="desktop-nav">
+                        <ul class="d-flex align-items-space-between">
+                            <li class="itemNav" onclick="scrollToSection('sec1')">Home</li>
+                            <li class="itemNav" onclick="scrollToSection('sec3')">About me</li>
+                            <li class="itemNav" onclick="scrollToSection('sec2')">Projects</li>
+                            <li class="itemNav" onclick="scrollToSection('sec4')">Background</li>
+                            <li class="itemNav" onclick="scrollToSection('sec5')">Tools</li>
+                            <li class="gift-icon" onclick="openGiftPopup()"><i class="fa-solid fa-gift fa-bounce"></i></li>
+                        </ul>
+                    </nav>
                 </header>
-                <main>
-                    <section id="sec1">Sección 1</section>
-                    <section id="sec2">Sección 2</section>
-                    <section id="sec3">Sección 3</section>
-                    <section id="sec4">Sección 4</section>
-                    <section id="sec5">Sección 5</section>
-                    <section id="sec6">Sección 6</section>
-                    <section id="sec7">Sección 7</section>
-                    <section id="sec8">Sección 8</section>
+
+                <!-- Menú móvil desplegable -->
+                <div class="mobile-menu">
+                    <div class="mobile-menu-header">
+                        <i class="fa-solid fa-xmark close-menu"></i>
+                    </div>
+                    <nav class="mobile-nav">
+                        <ul>
+                            <li class="itemNav" onclick="scrollToSection('sec1')">Home</li>
+                            <li class="itemNav" onclick="scrollToSection('sec3')">About me</li>
+                            <li class="itemNav" onclick="scrollToSection('sec2')">Projects</li>
+                            <li class="itemNav" onclick="scrollToSection('sec4')">Background</li>
+                            <li class="itemNav" onclick="scrollToSection('sec5')">Tools</li>
+                            <li class="gift-icon" onclick="openGiftPopup()"><i class="fa-solid fa-gift"></i> Gift</li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-sidebar-info">
+                        <div class="mobile-profile">
+                            <img src="assets/3.JPG" alt="" class="img-personal">
+                            <h2>Nicolas Borsari</h2>
+                        </div>
+                        <div class="mobile-details">
+                            <div class="detail-item">
+                                <p>A que me dedico</p>
+                                <h3>Desarrollador Web</h3>
+                            </div>
+                            <div class="detail-item">
+                                <p>Ubicación actual</p>
+                                <h3>Argentina</h3>
+                            </div>
+                        </div>
+                        <div class="mobile-social">
+                            <div class="redes-btns">
+                                <a href="https://www.instagram.com/nicoborsari" target="_blank"><img src="assets/logos/ins.png" alt="instagram"></a>
+                                <a href="https://www.linkedin.com/in/bonilifecoaching/" target="_blank"><img src="assets/logos/lk.png" alt="linkedin"></a>
+                                <a href="#" onclick="scrollToSection('sec3'); return false;"><img src="assets/logos/mail.png" alt="mail"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Overlay para cerrar el menú -->
+                <div class="menu-overlay"></div>
+                <main class="">
+                    <!-- <div class="container">
+                        <div class="light-effect"></div>
+                    </div> -->
+                    <section id="sec1" class="d-flex flex-column justify-content-end container">
+                        <div class="light-effect">
+                        </div>
+                        <p>Boni92</p>
+                        <h1 class="titulo-principal">
+                            I'm Nico Borsari <br>
+                            Frontend Web Developer
+                        </h1>
+                        <div class="btn-container">
+                            <div class="btn-container-btns">
+                                <button onclick="scrollToSection('sec2')">My Works</button>
+                                <a href="assets/documentos/CV_Nicolas_Borsari.pdf" download class="btn-download">
+                                    Download CV
+                                    <i class="fa-solid fa-file-arrow-down" style="color: #fafafa;"></i>
+                                </a>
+                            </div>
+                            <div class="btn-container-down">
+                                <button onclick="scrollToSection('sec2')">
+                                    <i class="fa-solid fa-arrow-down fa-fade"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+
+                    </section>
+                    <section id="sec2">
+                        <h2>Check out my featured projects</h2>
+                        <div class="box-container">
+                            <div class="box">
+                                <div class="box-content">
+                                    <div class="title-circle">
+                                        <h3>Lignina</h3>
+                                    </div>
+                                    <div class="type-circle">
+                                        <p>Coderhouse</p>
+                                    </div>
+                                    <button>Go <i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="box-content">
+                                    <div class="title-circle">
+                                        <h3>Pipza</h3>
+                                    </div>
+                                    <div class="type-circle">
+                                        <p>Coderhouse</p>
+                                    </div>
+                                    <button>Go <i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="box-content">
+                                    <div class="title-circle">
+                                        <h3>Wheater App</h3>
+                                    </div>
+                                    <div class="type-circle">
+                                        <p>Own Project</p>
+                                    </div>
+                                    <button>Go <i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="box-content">
+                                    <div class="title-circle">
+                                        <h3>Saint Francis</h3>
+                                    </div>
+                                    <div class="type-circle">
+                                        <p>San Francis Foundation</p>
+                                    </div>
+                                    <button>Go <i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="box-content">
+                                    <div class="title-circle">
+                                        <h3>Learn Coding</h3>
+                                    </div>
+                                    <div class="type-circle">
+                                        <p>Buenos Aires Council</p>
+                                    </div>
+                                    <button>Go <i class="fa-solid fa-arrow-right-long"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sec3">
+                        <h2 class="titulo-principal">Turning complex problems into simple designs</h2>
+                        
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <h2>40+</h2>
+                                <p>Happy Clients</p>
+                            </div>
+                            <div class="stat-box">
+                                <h2>4+</h2>
+                                <p>Years of Experience</p>
+                            </div>
+                            <div class="stat-box">
+                                <h2>30+</h2>
+                                <p>Projects Done</p>
+                            </div>
+                        </div>
+
+                        <div class="info-container">
+                            <div class="text-column">
+                                <p>I transform complex challenges into elegant solutions. My journey in web development started with curiosity and grew into passion. Every project is an opportunity to create something unique. I focus on clean code and intuitive design. Working closely with clients, I ensure their vision becomes reality.</p>
+                                <p>I believe in continuous learning and staying updated with technology. This helps me deliver modern, efficient solutions. My approach combines creativity with technical expertise. I create websites that not only look good but perform excellently. Choose me for your project, and let's build something amazing together.</p>
+                            </div>
+                            <div class="details-column">
+                                <div class="detail-box">
+                                    <h4>Mi nombre</h4>
+                                    <h2>Nicolás Borsari</h2>
+                                </div>
+                                <div class="detail-box">
+                                    <h4>Horas trabajadas</h4>
+                                    <h2>2000 horas</h2>
+                                </div>
+                                <div class="detail-box">
+                                    <h4>Mail</h4>
+                                    <h2>nicolas.borsari@gmail.com</h2>
+                                </div>
+                                <div class="detail-box">
+                                    <h4>Ubicación</h4>
+                                    <h2>Argentina</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cv-button-container">
+                            <a href="assets/documentos/CV_Nicolas_Borsari.pdf" download class="cv-btn">
+                                Download CV
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </a>
+                        </div>
+                    </section>
+                    <section id="sec4">
+                        <h2 class="titulo-principal">My Education and Practical Experience</h2>
+                        <p class="intro-text">Throughout my academic and professional journey, I've cultivated a diverse skill set that combines technical expertise with practical application. My background in civil engineering, coupled with specialized training in web development, enables me to approach problems with both analytical precision and creative innovation.</p>
+                        
+                        <h3 class="titulo-secundario">My Education</h3>
+                        
+                        <div class="education-table">
+                            <div class="table-row">
+                                <div class="table-cell date">2021-2022</div>
+                                <div class="table-cell title">
+                                    <h4>Frontend Developer</h4>
+                                    <h5>Course by <b>Coderhouse</b></h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Mastered React.js and modern frontend technologies. Built dynamic web apps with API integration and state management.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="table-cell date">2020-2021</div>
+                                <div class="table-cell title">
+                                    <h4>Web Developer</h4>
+                                    <h5>Course by <b>Coderhouse</b></h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Core web development with HTML5, CSS3, and JavaScript. Created responsive designs using Bootstrap and modern frameworks.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="table-cell date">2011-2020</div>
+                                <div class="table-cell title">
+                                    <h4>Civil Engineer</h4>
+                                    <h5>Course by <b>University of Buenos Aires</b></h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Developed analytical and problem-solving skills through complex engineering projects. Enhanced project management abilities.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="titulo-secundario">Work Experience</h3>
+                        
+                        <div class="education-table">
+                            <div class="table-row">
+                                <div class="table-cell date">2022-now</div>
+                                <div class="table-cell title">
+                                    <h4>Frontend Developer</h4>
+                                    <h5>Freelancer</h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Developing custom websites and web applications for diverse clients. Specializing in responsive design, user experience, and modern web technologies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="table-cell date">2022-2024</div>
+                                <div class="table-cell title">
+                                    <h4>Web Developer</h4>
+                                    <h5>Ministry of Technology</h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Led frontend development for educational platforms. Collaborated in cross-functional teams to create accessible web solutions for public services.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="table-row">
+                                <div class="table-cell date">2019-2021</div>
+                                <div class="table-cell title">
+                                    <h4>Designer and Structuralist</h4>
+                                    <h5>Steel Tech Group</h5>
+                                </div>
+                                <div class="table-cell description">
+                                    <p>Designed modular structures using CAD software. Applied systematic thinking and optimization techniques, skills transferable to programming.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sec5">
+                        <h3 class="titulo-secundario">My Favorite Tools</h3>
+                        
+                        <div class="tools-container">
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/html.png" alt="HTML">
+                                </div>
+                                <p>HTML</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/css.png" alt="CSS">
+                                </div>
+                                <p>CSS</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/js.png" alt="JavaScript">
+                                </div>
+                                <p>JavaScript</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/bootstrap.png" alt="Bootstrap">
+                                </div>
+                                <p>Bootstrap</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/wordpress.png" alt="WordPress">
+                                </div>
+                                <p>WordPress</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/react.png" alt="React">
+                                </div>
+                                <p>React</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/figma.png" alt="Figma">
+                                </div>
+                                <p>Figma</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/tailwind.png" alt="Tailwind">
+                                </div>
+                                <p>Tailwind</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/sass.png" alt="SASS">
+                                </div>
+                                <p>SASS</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/git.png" alt="Git">
+                                </div>
+                                <p>Git</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/github.png" alt="GitHub">
+                                </div>
+                                <p>GitHub</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/vsc.png" alt="VS Code">
+                                </div>
+                                <p>VS Code</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/notion.png" alt="Notion">
+                                </div>
+                                <p>Notion</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/Illustrator.png" alt="Illustrator">
+                                </div>
+                                <p>Illustrator</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/xd.png" alt="Adobe XD">
+                                </div>
+                                <p>Adobe XD</p>
+                            </div>
+                            
+                            <div class="tool-box">
+                                <div class="tool-icon">
+                                    <img src="assets/section5/miro.png" alt="Miro">
+                                </div>
+                                <p>Miro</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="sec6">
+                        <h2 class="titulo-principal">Let's make something awesome together</h2>
+                        
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder=" " required>
+                                    <label for="name">Your Name *</label>
+                                    <div class="separator"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" id="company" name="company" placeholder=" ">
+                                    <label for="company">Company Name</label>
+                                    <div class="separator"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder=" " required>
+                                    <label for="email">Email Address *</label>
+                                    <div class="separator"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" placeholder=" " required>
+                                    <label for="phone">Phone Number *</label>
+                                    <div class="separator"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                                    <label for="message">A Few Words *</label>
+                                    <div class="separator"></div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                Send Message
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </section>
+                    
                 </main>
                 <footer>
-                    <p>© 2025 - Mi Portafolio</p>
+                    <p>© 2025 - Boni92 Portafolio</p>
                 </footer>
             </div>
         </div>
     </div>
+    <!-- Popup -->
+    <div class="popup-overlay" id="giftPopup">
+        <div class="popup-content">
+            <h3>Contactame para tener una prueba gratis</h3>
+            <div class="popup-buttons">
+                <button class="close-btn" onclick="closeGiftPopup()">Salir</button>
+                <button class="contact-btn" onclick="contactFromPopup()">Contactar</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Inicializa EmailJS con tu Public Key
+        // Encuentra tu Public Key en: Dashboard > Account > API Keys
+        (function() {
+            emailjs.init("Gkp9DVcAGg3eX__Re"); // ⚠️ Reemplaza con tu Public Key
+        })();
+    </script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

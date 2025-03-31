@@ -1,5 +1,27 @@
+// Importar Bootstrap desde node_modules
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 @import "sidebar";
 @import "header";
 @import "main";
 @import "footer";
 @import "mediaqueries";
+
+// Variables
+$sidebar-width: 300px;
+$header-full-height: 80px;
+
+// Imports
+@import 'main';
+@import 'responsive';
+
+html{
+    font-size: 16px;
+}
+body{
+    font-family: "Nunito",'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}

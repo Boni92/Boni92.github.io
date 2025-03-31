@@ -1,16 +1,60 @@
 $header-height: 60px;
-
+$header-margin-top: 20px;
+$header-full-height: $header-height + $header-margin-top * 2;
+$padding-left: 80px;
 .header {
     height: $header-height;
     width: 100%;
     position: fixed;
     top: 0;
     left: $sidebar-width;
-    background: rgba(255, 255, 255, 0.8);
+    background: transparent;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: #fff;
+    margin-top: $header-margin-top;
+    margin-bottom: $header-margin-top;
+    nav {
+        width: 100%;
+        padding: 0;
+        margin-right: 40px;
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            margin: 0;
+            padding-left: $padding-left;
+            width: calc(100% - $sidebar-width);
+            position: relative;
+            li {
+                padding: 0;
+                white-space: nowrap;
+            }
+            .gift-icon {
+                position: absolute;
+                right: 30px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: linear-gradient(158deg, rgba(255,92,253,1) 0%, rgba(239,216,255,1) 50%, rgba(175,179,255,1) 100%);
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                i {
+                    color: #000000;
+                    font-size: 1.2rem;
+                }
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
 }
