@@ -11899,6 +11899,9 @@ textarea.form-control-lg {
   font-size: 1rem;
   text-align: left;
 }
+.sidebar .sidebar-content .box:nth-child(2) {
+  margin-bottom: 20px;
+}
 .sidebar .sidebar-content .redes {
   display: flex;
   flex-direction: column;
@@ -11957,7 +11960,7 @@ textarea.form-control-lg {
   font-size: 1.2rem;
   font-weight: 100;
   color: #fff;
-  margin-top: 20px;
+  padding-top: 0;
   margin-bottom: 20px;
 }
 .header nav {
@@ -12008,9 +12011,10 @@ textarea.form-control-lg {
   margin-left: 250px;
   background: #000000;
   padding-left: 0;
+  width: calc(100vw - 250px);
 }
 
-.container .light-effect {
+.containersec1 .light-effect {
   position: absolute;
   top: -100px;
   right: -200px;
@@ -12046,6 +12050,7 @@ main #sec1 {
   color: #fff;
   padding-bottom: 50px;
   background-color: #000000;
+  padding-left: 20px;
 }
 main #sec1 p {
   font-size: 0.9rem;
@@ -12114,18 +12119,19 @@ main #sec2 {
   height: auto;
 }
 main #sec2 h2, main #sec2 .h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 100;
   font-style: italic;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding-left: 20px;
 }
 main #sec2 .box-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 30px) / 2), 1fr));
   gap: 30px;
   padding: 20px;
+  box-sizing: border-box;
 }
 main #sec2 .box-container .box {
   width: 100%;
@@ -12179,7 +12185,7 @@ main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-co
   font-weight: bold;
   white-space: nowrap;
 }
-main #sec2 .box-container .box .box-content button {
+main #sec2 .box-container .box .box-content a {
   background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
   border: none;
   padding: 8px 15px;
@@ -12192,11 +12198,12 @@ main #sec2 .box-container .box .box-content button {
   gap: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
-main #sec2 .box-container .box .box-content button i {
+main #sec2 .box-container .box .box-content a i {
   transform: rotate(-45deg);
 }
-main #sec2 .box-container .box .box-content button:hover {
+main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
 main #sec2 .box-container .box:nth-child(1)::before {
@@ -12277,7 +12284,7 @@ main #sec3 .info-container {
   display: flex;
   gap: 50px;
   margin-bottom: 0px;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
 }
 main #sec3 .info-container .text-column {
   flex: 0 0 65%;
@@ -12302,16 +12309,23 @@ main #sec3 .info-container .details-column {
 }
 main #sec3 .info-container .details-column .detail-box {
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 15px;
+  width: 80%;
 }
 main #sec3 .info-container .details-column .detail-box h4, main #sec3 .info-container .details-column .detail-box .h4 {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 3px;
   font-weight: 300;
+  width: 80%;
 }
 main #sec3 .info-container .details-column .detail-box h2, main #sec3 .info-container .details-column .detail-box .h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 80%;
+}
+main #sec3 .info-container .details-column .detail-box p {
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -12716,6 +12730,81 @@ main #sec6 .contact-form .submit-btn:hover {
   color: #fff;
 }
 
+.sidebar .box.redes {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.sidebar .box.redes .redes-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.sidebar .box.redes .redes-btns a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar .box.redes .redes-btns a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(158deg, rgba(255, 92, 253, 0.2) 0%, rgba(239, 216, 255, 0.2) 50%, rgba(175, 179, 255, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.sidebar .box.redes .redes-btns a img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.sidebar .box.redes .redes-btns a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+.sidebar .box.redes .redes-btns a:hover::before {
+  opacity: 1;
+}
+.sidebar .box.redes .redes-btns a:hover img {
+  transform: rotate(360deg);
+}
+.sidebar .box.redes .redes-btns a:nth-child(1):hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.sidebar .box.redes .redes-btns a:nth-child(2):hover {
+  background: #0077b5;
+}
+.sidebar .box.redes .redes-btns a:nth-child(3):hover {
+  background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
+}
+.sidebar .box.redes button {
+  margin-top: 10px;
+  background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
+  border: none;
+  padding: 12px 19px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.sidebar .box.redes button:hover {
+  transform: scale(1.05);
+}
+
 footer {
   text-align: center;
   padding: 20px;
@@ -12753,9 +12842,10 @@ footer {
   margin-left: 300px;
   background: #000000;
   padding-left: 0;
+  width: calc(100vw - 300px);
 }
 
-.container .light-effect {
+.containersec1 .light-effect {
   position: absolute;
   top: -100px;
   right: -200px;
@@ -12791,6 +12881,7 @@ main #sec1 {
   color: #fff;
   padding-bottom: 50px;
   background-color: #000000;
+  padding-left: 20px;
 }
 main #sec1 p {
   font-size: 0.9rem;
@@ -12859,18 +12950,19 @@ main #sec2 {
   height: auto;
 }
 main #sec2 h2, main #sec2 .h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 100;
   font-style: italic;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding-left: 20px;
 }
 main #sec2 .box-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(calc((100% - 30px) / 2), 1fr));
   gap: 30px;
   padding: 20px;
+  box-sizing: border-box;
 }
 main #sec2 .box-container .box {
   width: 100%;
@@ -12924,7 +13016,7 @@ main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-co
   font-weight: bold;
   white-space: nowrap;
 }
-main #sec2 .box-container .box .box-content button {
+main #sec2 .box-container .box .box-content a {
   background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
   border: none;
   padding: 8px 15px;
@@ -12937,11 +13029,12 @@ main #sec2 .box-container .box .box-content button {
   gap: 5px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
-main #sec2 .box-container .box .box-content button i {
+main #sec2 .box-container .box .box-content a i {
   transform: rotate(-45deg);
 }
-main #sec2 .box-container .box .box-content button:hover {
+main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
 main #sec2 .box-container .box:nth-child(1)::before {
@@ -13022,7 +13115,7 @@ main #sec3 .info-container {
   display: flex;
   gap: 50px;
   margin-bottom: 0px;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
 }
 main #sec3 .info-container .text-column {
   flex: 0 0 65%;
@@ -13047,16 +13140,23 @@ main #sec3 .info-container .details-column {
 }
 main #sec3 .info-container .details-column .detail-box {
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 15px;
+  width: 80%;
 }
 main #sec3 .info-container .details-column .detail-box h4, main #sec3 .info-container .details-column .detail-box .h4 {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 3px;
   font-weight: 300;
+  width: 80%;
 }
 main #sec3 .info-container .details-column .detail-box h2, main #sec3 .info-container .details-column .detail-box .h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 80%;
+}
+main #sec3 .info-container .details-column .detail-box p {
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -13459,6 +13559,81 @@ main #sec6 .contact-form .submit-btn:hover {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
+}
+
+.sidebar .box.redes {
+  margin-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.sidebar .box.redes .redes-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.sidebar .box.redes .redes-btns a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar .box.redes .redes-btns a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(158deg, rgba(255, 92, 253, 0.2) 0%, rgba(239, 216, 255, 0.2) 50%, rgba(175, 179, 255, 0.2) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.sidebar .box.redes .redes-btns a img {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.sidebar .box.redes .redes-btns a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+.sidebar .box.redes .redes-btns a:hover::before {
+  opacity: 1;
+}
+.sidebar .box.redes .redes-btns a:hover img {
+  transform: rotate(360deg);
+}
+.sidebar .box.redes .redes-btns a:nth-child(1):hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.sidebar .box.redes .redes-btns a:nth-child(2):hover {
+  background: #0077b5;
+}
+.sidebar .box.redes .redes-btns a:nth-child(3):hover {
+  background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
+}
+.sidebar .box.redes button {
+  margin-top: 10px;
+  background: linear-gradient(158deg, rgb(255, 92, 253) 0%, rgb(239, 216, 255) 50%, rgb(175, 179, 255) 100%);
+  border: none;
+  padding: 12px 19px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.sidebar .box.redes button:hover {
+  transform: scale(1.05);
 }
 
 .menu-toggle, .mobile-menu, .menu-overlay {

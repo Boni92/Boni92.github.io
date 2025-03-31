@@ -6,8 +6,9 @@ $bg-main: #000000;
     margin-left: $sidebar-width;
     background: $bg-main;
     padding-left: 0;
+    width: calc(100vw - $sidebar-width);
 }
-.container {
+.containersec1 {
     // width: 80vw;
     // height: 80vh;
     // background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 5%, transparent 40%);
@@ -56,6 +57,7 @@ main {
         color: #fff;
         padding-bottom: 50px;
         background-color: #000000;
+        padding-left: 20px;
         p{
             font-size: .9rem;
             font-weight: 100;
@@ -123,18 +125,19 @@ main {
         background-color: #000000;
         height: auto;
         h2{
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 100;
             font-style: italic;
-            margin-bottom: 50px;
+            margin-bottom: 25px;
             padding-left: 20px;
         }
         .box-container{
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(calc((100% - 30px) / 2), 1fr));
             gap: 30px;
             padding: 20px;
+            box-sizing: border-box;
             .box{
                 width: 100%;
                 aspect-ratio: 1;
@@ -191,7 +194,7 @@ main {
                         }
                     }
 
-                    button {
+                    a {
                         background: linear-gradient(158deg, rgba(255,92,253,1) 0%, rgba(239,216,255,1) 50%, rgba(175,179,255,1) 100%);
                         border: none;
                         padding: 8px 15px;
@@ -204,6 +207,7 @@ main {
                         gap: 5px;
                         cursor: pointer;
                         transition: transform 0.3s ease;
+                        text-decoration: none;
 
                         i {
                             transform: rotate(-45deg);
@@ -311,7 +315,7 @@ main {
             display: flex;
             gap: 50px;
             margin-bottom: 0px;
-            padding: 0 20px;
+            padding: 0 0 0 20px;
 
             .text-column {
                 flex: 0 0 65%;
@@ -334,23 +338,32 @@ main {
                 flex-direction: column;
                 gap: 8px;
                 justify-content: space-between;
-                height: 100%;
+            height: 100%;
 
                 .detail-box {
                     padding: 12px;
-                    background: rgba(255, 255, 255, 0.05);
+                    background: rgba(255, 255, 255, 0.03);
                     border-radius: 15px;
-
+                    width: 80%;
                     h4 {
                         font-size: 0.9rem;
                         color: rgba(255, 255, 255, 0.6);
                         margin-bottom: 3px;
                         font-weight: 300;
+                        width: 80%;
+
+                        
                     }
 
                     h2 {
                         font-size: 1.2rem;
                         font-weight: 400;
+                        width: 80%;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        
                     }
                 }
             }
@@ -815,6 +828,95 @@ main {
                 background: none;
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 color: #fff;
+            }
+        }
+    }
+}
+
+.sidebar {
+    .box.redes {
+        margin-top: 40px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+
+        .redes-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+
+            a {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.05);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(158deg, rgba(255,92,253,0.2) 0%, rgba(239,216,255,0.2) 50%, rgba(175,179,255,0.2) 100%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    transform: translateY(-5px) scale(1.1);
+                    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+
+                    &::before {
+                        opacity: 1;
+                    }
+
+                    img {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                &:nth-child(1):hover { // Instagram
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                }
+
+                &:nth-child(2):hover { // LinkedIn
+                    background: #0077b5;
+                }
+
+                &:nth-child(3):hover { // Email
+                    background: linear-gradient(158deg, rgba(255,92,253,1) 0%, rgba(239,216,255,1) 50%, rgba(175,179,255,1) 100%);
+                }
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            background: linear-gradient(158deg, rgba(255,92,253,1) 0%, rgba(239,216,255,1) 50%, rgba(175,179,255,1) 100%);
+            border: none;
+            padding: 12px 19px;
+            border-radius: 30px;
+            color: #000;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
             }
         }
     }

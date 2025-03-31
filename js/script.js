@@ -305,3 +305,34 @@ mobileNavItems.forEach(item => {
         // El scrollToSection ya está definido y se llama desde el onclick en el HTML
     });
 });
+
+// Variables globales para el contador de horas
+let currentHours = 6033;
+
+// Función para actualizar el contador en la interfaz
+function updateHoursDisplay() {
+    const hoursElement = document.getElementById('workedHours');
+    if (hoursElement) {
+        hoursElement.textContent = currentHours;
+    }
+}
+
+// Función para verificar si es medianoche y actualizar las horas
+function checkMidnightAndUpdate() {
+    const now = new Date();
+    if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+        currentHours += 8;
+        updateHoursDisplay();
+    }
+}
+
+// Función para inicializar el contador
+function initializeHoursCounter() {
+    updateHoursDisplay();
+    
+    // Verificar cada segundo si es medianoche
+    setInterval(checkMidnightAndUpdate, 1000);
+}
+
+// Inicializar cuando se carga la página
+document.addEventListener('DOMContentLoaded', initializeHoursCounter);

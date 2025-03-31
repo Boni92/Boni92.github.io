@@ -58,6 +58,9 @@ $padding-top: 20px;
                 text-align: left;
             }
         }
+        .box:nth-child(2){
+            margin-bottom: 20px;
+        }
         .redes{
             display: flex;
             flex-direction: column;
