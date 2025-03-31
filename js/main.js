@@ -1,27 +1,6 @@
 // Variables globales
 let currentHours = 6033;
 
-// Elementos del DOM
-const menuToggle = document.querySelector('.menu-toggle'); //menu hamburguesa
-const mobileMenu = document.querySelector('.mobile-menu'); //menu móvil
-const menuOverlay = document.querySelector('.menu-overlay'); //overlay del menu móvil
-const closeMenu = document.querySelector('.close-menu'); //cerrar menu móvil
-const contactForm = document.querySelector('.contact-form'); //formulario de contacto
-const submitBtn = contactForm?.querySelector('.submit-btn'); //boton de envío del formulario
-console.log(closeMenu);
-// Funciones del menú móvil
-function openMenu() {
-    mobileMenu.classList.add('active');
-    menuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeMenuFunc() {
-    mobileMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
 // Funciones del popup
 function openGiftPopup() {
     const popup = document.getElementById('giftPopup');
@@ -43,13 +22,37 @@ function contactFromPopup() {
 // Función para desplazarse a una sección
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
-    const headerHeight = document.querySelector('.header').offsetHeight;
-    const targetPosition = section.offsetTop - headerHeight;
-    
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-    });
+    if (section) {
+        const headerOffset = 80; // Ajusta este valor según el tamaño de tu header
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+}
+
+// Elementos del DOM
+const menuToggle = document.querySelector('.menu-toggle'); //menu hamburguesa
+const mobileMenu = document.querySelector('.mobile-menu'); //menu móvil
+const menuOverlay = document.querySelector('.menu-overlay'); //overlay del menu móvil
+const closeMenu = document.querySelector('.close-menu'); //cerrar menu móvil
+const contactForm = document.querySelector('.contact-form'); //formulario de contacto
+const submitBtn = contactForm?.querySelector('.submit-btn'); //boton de envío del formulario
+console.log(closeMenu);
+// Funciones del menú móvil
+function openMenu() {
+    mobileMenu.classList.add('active');
+    menuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenuFunc() {
+    mobileMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 // Funciones del contador de horas
@@ -232,6 +235,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar contador de horas
     initializeHoursCounter();
 
+    // Configurar navegación por secciones
+    document.querySelectorAll('[data-section]').forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const sectionId = this.getAttribute('data-section');
+            if (sectionId) {
+                scrollToSection(sectionId);
+            }
+        });
+    });
+
+    // Configurar acciones del popup
+    document.querySelectorAll('[data-action]').forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const action = this.getAttribute('data-action');
+            switch(action) {
+                case 'openGiftPopup':
+                    openGiftPopup();
+                    break;
+                case 'closeGiftPopup':
+                    closeGiftPopup();
+                    break;
+                case 'contactFromPopup':
+                    contactFromPopup();
+                    break;
+            }
+        });
+    });
+
     // Configurar formulario de contacto
     if (contactForm && submitBtn) {
         const inputs = contactForm.querySelectorAll('input, textarea');
@@ -298,15 +333,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Configurar menú móvil
-    if (menuToggle && mobileMenu && menuOverlay && closeMenu) {
-        menuToggle.addEventListener('click', openMenu);
-        closeMenu.addEventListener('click', closeMenuFunc);
-        menuOverlay.addEventListener('click', closeMenuFunc);
-        console.log("estoy aca");
-        const mobileNavItems = document.querySelectorAll('.mobile-nav .itemNav');
-        mobileNavItems.forEach(item => {
-            item.addEventListener('click', closeMenuFunc);
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            openMenu();
         });
+
+        // Cerrar menú al hacer clic en el overlay
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeMenuFunc();
+            });
+        }
+
+        // Cerrar menú al hacer clic en los items del menú
+        const menuItems = mobileMenu.querySelectorAll('.itemNav');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const sectionId = this.getAttribute('data-section');
+                if (sectionId) {
+                    scrollToSection(sectionId);
+                }
+                closeMenuFunc();
+            });
+        });
+
+        // Cerrar menú al hacer clic en el botón de cerrar
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeMenuFunc();
+            });
+        }
     }
 
     // Configurar popup

@@ -43,9 +43,9 @@
                         <div class="redes-btns">
                             <a href="https://www.instagram.com/nicoborsari" target="_blank"><img src="assets/logos/ins.png" alt="instagram"></a>
                             <a href="https://www.linkedin.com/in/bonilifecoaching/" target="_blank"><img src="assets/logos/lk.png" alt="linkedin"></a>
-                            <a href="#" onclick="scrollToSection('sec3'); return false;"><img src="assets/logos/mail.png" alt="mail"></a>
+                            <a href="#" data-section="sec3"><img src="assets/logos/mail.png" alt="mail"></a>
                         </div>
-                        <button onclick="scrollToSection('sec6')">Let's work together!</button>
+                        <button data-section="sec6">Let's work together!</button>
                     </div>
                 </div>
             </aside>
@@ -58,12 +58,12 @@
                     </div>
                     <nav class="desktop-nav">
                         <ul class="d-flex align-items-space-between">
-                            <li class="itemNav" onclick="scrollToSection('sec1')">Home</li>
-                            <li class="itemNav" onclick="scrollToSection('sec3')">About me</li>
-                            <li class="itemNav" onclick="scrollToSection('sec2')">Projects</li>
-                            <li class="itemNav" onclick="scrollToSection('sec4')">Background</li>
-                            <li class="itemNav" onclick="scrollToSection('sec5')">Tools</li>
-                            <li class="gift-icon" onclick="openGiftPopup()"><i class="fa-solid fa-gift fa-bounce"></i></li>
+                            <li class="itemNav" data-section="sec1">Home</li>
+                            <li class="itemNav" data-section="sec3">About me</li>
+                            <li class="itemNav" data-section="sec2">Projects</li>
+                            <li class="itemNav" data-section="sec4">Background</li>
+                            <li class="itemNav" data-section="sec5">Tools</li>
+                            <li class="gift-icon" data-action="openGiftPopup"><i class="fa-solid fa-gift fa-bounce"></i></li>
                         </ul>
                     </nav>
                 </header>
@@ -75,12 +75,12 @@
                     </div>
                     <nav class="mobile-nav">
                         <ul>
-                            <li class="itemNav" onclick="scrollToSection('sec1')">Home</li>
-                            <li class="itemNav" onclick="scrollToSection('sec3')">About me</li>
-                            <li class="itemNav" onclick="scrollToSection('sec2')">Projects</li>
-                            <li class="itemNav" onclick="scrollToSection('sec4')">Background</li>
-                            <li class="itemNav" onclick="scrollToSection('sec5')">Tools</li>
-                            <li class="gift-icon" onclick="openGiftPopup()"><i class="fa-solid fa-gift"></i> Gift</li>
+                            <li class="itemNav" data-section="sec1">Home</li>
+                            <li class="itemNav" data-section="sec3">About me</li>
+                            <li class="itemNav" data-section="sec2">Projects</li>
+                            <li class="itemNav" data-section="sec4">Background</li>
+                            <li class="itemNav" data-section="sec5">Tools</li>
+                            <li class="gift-icon" data-action="openGiftPopup"><i class="fa-solid fa-gift"></i> Gift</li>
                         </ul>
                     </nav>
                     <div class="mobile-sidebar-info">
@@ -102,7 +102,7 @@
                             <div class="redes-btns">
                                 <a href="https://www.instagram.com/nicoborsari" target="_blank"><img src="assets/logos/ins.png" alt="instagram"></a>
                                 <a href="https://www.linkedin.com/in/bonilifecoaching/" target="_blank"><img src="assets/logos/lk.png" alt="linkedin"></a>
-                                <a href="#" onclick="scrollToSection('sec3'); return false;"><img src="assets/logos/mail.png" alt="mail"></a>
+                                <a href="#" data-section="sec3"><img src="assets/logos/mail.png" alt="mail"></a>
                             </div>
                         </div>
                     </div>
@@ -123,14 +123,14 @@
                         </h1>
                         <div class="btn-container">
                             <div class="btn-container-btns">
-                                <button onclick="scrollToSection('sec2')">My Works</button>
+                                <button data-section="sec2">My Works</button>
                                 <a href="assets/documentos/CV_Nicolas_Borsari.pdf" download class="btn-download">
                                     Download CV
                                     <i class="fa-solid fa-file-arrow-down"></i>
                                 </a>
                             </div>
                             <div class="btn-container-down">
-                                <button onclick="scrollToSection('sec2')">
+                                <button data-section="sec2">
                                     <i class="fa-solid fa-arrow-down fa-fade"></i>
                                 </button>
                             </div>
@@ -500,10 +500,10 @@
     <!-- Popup -->
     <div class="popup-overlay" id="giftPopup">
         <div class="popup-content">
-            <h3>Contact me for a free trial</h3>
+            <h3>Contact me for a free trial!</h3>
             <div class="popup-buttons">
-                <button class="close-btn" onclick="closeGiftPopup()">Exit</button>
-                <button class="contact-btn" onclick="contactFromPopup()">Contact</button>
+                <button class="close-btn" data-action="closeGiftPopup">Exit</button>
+                <button class="contact-btn" data-action="contactFromPopup">Contact</button>
             </div>
         </div>
     </div>
@@ -515,6 +515,6 @@
             emailjs.init("Gkp9DVcAGg3eX__Re"); // ⚠️ Reemplaza con tu Public Key
         })();
     </script>
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

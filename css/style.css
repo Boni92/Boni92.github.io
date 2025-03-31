@@ -12238,7 +12238,7 @@ main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
 main #sec2 .box-container .box:nth-child(1)::before {
-  background-image: url(../assets/section3/fondo1.jpg);
+  background-image: url(../assets/section3/living.jpg);
 }
 main #sec2 .box-container .box:nth-child(2)::before {
   background-image: url(../assets/section3/Pizza_opt.jpg);
@@ -13226,7 +13226,7 @@ main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
 main #sec2 .box-container .box:nth-child(1)::before {
-  background-image: url(../assets/section3/fondo1.jpg);
+  background-image: url(../assets/section3/living.jpg);
 }
 main #sec2 .box-container .box:nth-child(2)::before {
   background-image: url(../assets/section3/Pizza_opt.jpg);
