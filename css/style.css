@@ -11948,7 +11948,7 @@ textarea.form-control-lg {
 
 .header {
   height: 60px;
-  width: 100%;
+  width: 80%;
   position: fixed;
   top: 0;
   left: 250px;
@@ -11967,6 +11967,10 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0;
   margin-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .header nav ul {
   list-style: none;
@@ -11982,8 +11986,8 @@ textarea.form-control-lg {
   padding: 0;
   white-space: nowrap;
 }
-.header nav ul .gift-icon {
-  position: absolute;
+.header nav .gift-icon {
+  *position: absolute;
   right: 30px;
   width: 40px;
   height: 40px;
@@ -11995,11 +11999,11 @@ textarea.form-control-lg {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.header nav ul .gift-icon i {
+.header nav .gift-icon i {
   color: #000000;
   font-size: 1.2rem;
 }
-.header nav ul .gift-icon:hover {
+.header nav .gift-icon:hover {
   transform: scale(1.1);
 }
 
@@ -12008,7 +12012,7 @@ textarea.form-control-lg {
 }
 .main-content {
   margin-left: 250px;
-  background: #000000;
+  background: transparent;
   padding-left: 0;
   padding-right: 0;
   width: calc(100vw - 250px);
@@ -12053,7 +12057,8 @@ main #sec1 {
   align-items: flex-start;
   color: #fff;
   padding-bottom: 50px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   padding-left: 20px;
 }
 main #sec1 p {
@@ -12145,7 +12150,8 @@ main #sec2 {
   align-items: flex-start;
   color: #fff;
   padding-bottom: 50px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
 }
 main #sec2 h2, main #sec2 .h2 {
@@ -12302,7 +12308,8 @@ main #sec3 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 0px;
 }
@@ -12410,7 +12417,8 @@ main #sec4 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -12506,7 +12514,8 @@ main #sec5 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -12594,7 +12603,8 @@ main #sec6 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -12707,7 +12717,7 @@ main #sec6 .contact-form .submit-btn:hover {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 80%;
   height: 100px;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -13033,7 +13043,8 @@ main #sec6 .contact-form .submit-btn:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: black;
+  background: transparent;
+  border: none;
 }
 
 @media (max-width: 768px) {
@@ -13064,7 +13075,7 @@ footer {
 }
 .main-content {
   margin-left: 300px;
-  background: #000000;
+  background: transparent;
   padding-left: 0;
   padding-right: 0;
   width: calc(100vw - 300px);
@@ -13109,7 +13120,8 @@ main #sec1 {
   align-items: flex-start;
   color: #fff;
   padding-bottom: 50px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   padding-left: 20px;
 }
 main #sec1 p {
@@ -13201,7 +13213,8 @@ main #sec2 {
   align-items: flex-start;
   color: #fff;
   padding-bottom: 50px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
 }
 main #sec2 h2, main #sec2 .h2 {
@@ -13358,7 +13371,8 @@ main #sec3 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 0px;
 }
@@ -13466,7 +13480,8 @@ main #sec4 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -13562,7 +13577,8 @@ main #sec5 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -13650,7 +13666,8 @@ main #sec6 {
   justify-content: flex-start;
   color: #fff;
   padding: 50px 20px;
-  background-color: #000000;
+  background-color: transparent;
+  border: none;
   height: auto;
   gap: 30px;
 }
@@ -13763,7 +13780,7 @@ main #sec6 .contact-form .submit-btn:hover {
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 80%;
   height: 80px;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);

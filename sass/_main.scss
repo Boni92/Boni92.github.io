@@ -7,7 +7,7 @@ $bg-main: #000000;
 }
 .main-content {
     margin-left: $sidebar-width;
-    background: $bg-main;
+    background: transparent;
     padding-left: 0;
     padding-right: 0;
     width: calc(100vw - $sidebar-width);
@@ -58,7 +58,8 @@ main {
         align-items: flex-start;
         color: #fff;
         padding-bottom: 50px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         padding-left: 20px;
         p{
             font-size: .9rem;
@@ -154,7 +155,8 @@ main {
         align-items: flex-start;
         color: #fff;
         padding-bottom: 50px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         height: auto;
         h2{
             font-size: 3.5rem;
@@ -333,7 +335,8 @@ main {
         justify-content: flex-start;
         color: #fff;
         padding: 50px 20px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         height: auto;
         gap: 0px;
 
@@ -456,7 +459,8 @@ main {
         justify-content: flex-start;
         color: #fff;
         padding: 50px 20px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         height: auto;
         gap: 30px;
 
@@ -569,7 +573,8 @@ main {
         justify-content: flex-start;
         color: #fff;
         padding: 50px 20px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         height: auto;
         gap: 30px;
 
@@ -672,7 +677,8 @@ main {
         justify-content: flex-start;
         color: #fff;
         padding: 50px 20px;
-        background-color: #000000;
+        background-color: transparent;
+        border: none;
         height: auto;
         gap: 30px;
 
@@ -801,7 +807,7 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    width: calc(100%);
+    width: 80%;
     height: $header-full-height;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
