@@ -12192,6 +12192,25 @@ main #sec2 .box-container .box::before {
 main #sec2 .box-container .box:hover::before {
   transform: scale(1.1);
 }
+main #sec2 .box-container .box .title-circle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.462745098);
+  border-radius: 20px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+main #sec2 .box-container .box .title-circle h3, main #sec2 .box-container .box .title-circle .h3 {
+  margin: 0;
+  *font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  white-space: nowrap;
+}
 main #sec2 .box-container .box .box-content {
   position: absolute;
   bottom: 20px;
@@ -12201,7 +12220,7 @@ main #sec2 .box-container .box .box-content {
   gap: 15px;
   z-index: 1;
 }
-main #sec2 .box-container .box .box-content .title-circle, main #sec2 .box-container .box .box-content .type-circle {
+main #sec2 .box-container .box .box-content .type-circle {
   background: #ffffff;
   border-radius: 20px;
   padding: 8px 15px;
@@ -12209,7 +12228,7 @@ main #sec2 .box-container .box .box-content .title-circle, main #sec2 .box-conta
   align-items: center;
   justify-content: center;
 }
-main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-container .box .box-content .title-circle .h3, main #sec2 .box-container .box .box-content .title-circle p, main #sec2 .box-container .box .box-content .type-circle h3, main #sec2 .box-container .box .box-content .type-circle .h3, main #sec2 .box-container .box .box-content .type-circle p {
+main #sec2 .box-container .box .box-content .type-circle p {
   margin: 0;
   font-size: 0.7rem;
   color: #000;
@@ -12237,20 +12256,45 @@ main #sec2 .box-container .box .box-content a i {
 main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
-main #sec2 .box-container .box:nth-child(1)::before {
+main #sec2 .box-container .box.lignina::before {
   background-image: url(../assets/section3/living.jpg);
 }
-main #sec2 .box-container .box:nth-child(2)::before {
+main #sec2 .box-container .box.pitza::before {
   background-image: url(../assets/section3/Pizza_opt.jpg);
 }
-main #sec2 .box-container .box:nth-child(3)::before {
+main #sec2 .box-container .box.weather::before {
   background-image: url(../assets/section3/sunny2_opt.jpg);
 }
-main #sec2 .box-container .box:nth-child(4)::before {
+main #sec2 .box-container .box.saint::before {
   background-image: url(../assets/section3/francis.jpg);
 }
-main #sec2 .box-container .box:nth-child(5)::before {
+main #sec2 .box-container .box.tech::before {
   background-image: url(../assets/section3/gob.jpg);
+}
+main #sec2 .box-container .box:nth-child(1) .title-circle {
+  font-family: "Ms Madi", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+main #sec2 .box-container .box:nth-child(2) .title-circle {
+  font-family: "Corinthia", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(3) .title-circle {
+  font-family: "Ephesis", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(4) .title-circle {
+  font-family: "Corinthia", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(5) .title-circle {
+  font-family: "Ms Madi", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
 }
 main #sec3 {
   flex-direction: column;
@@ -12940,6 +12984,30 @@ main #sec6 .contact-form .submit-btn:hover {
   main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-container .box .box-content .title-circle .h3, main #sec2 .box-container .box .box-content .title-circle p, main #sec2 .box-container .box .box-content .type-circle h3, main #sec2 .box-container .box .box-content .type-circle .h3, main #sec2 .box-container .box .box-content .type-circle p {
     font-size: 0.65rem;
   }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(1) {
+    font-family: "Ms Madi", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(2) {
+    font-family: "Orbitron", "Lato", sans-serif;
+    font-weight: 800;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Ephesis", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.9rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Corinthia", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.9rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Ms Madi", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
   main #sec2 .box-container .box .box-content a {
     justify-content: center;
     padding: 6px 12px;
@@ -13180,6 +13248,25 @@ main #sec2 .box-container .box::before {
 main #sec2 .box-container .box:hover::before {
   transform: scale(1.1);
 }
+main #sec2 .box-container .box .title-circle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.462745098);
+  border-radius: 20px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+main #sec2 .box-container .box .title-circle h3, main #sec2 .box-container .box .title-circle .h3 {
+  margin: 0;
+  *font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  white-space: nowrap;
+}
 main #sec2 .box-container .box .box-content {
   position: absolute;
   bottom: 20px;
@@ -13189,7 +13276,7 @@ main #sec2 .box-container .box .box-content {
   gap: 15px;
   z-index: 1;
 }
-main #sec2 .box-container .box .box-content .title-circle, main #sec2 .box-container .box .box-content .type-circle {
+main #sec2 .box-container .box .box-content .type-circle {
   background: #ffffff;
   border-radius: 20px;
   padding: 8px 15px;
@@ -13197,7 +13284,7 @@ main #sec2 .box-container .box .box-content .title-circle, main #sec2 .box-conta
   align-items: center;
   justify-content: center;
 }
-main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-container .box .box-content .title-circle .h3, main #sec2 .box-container .box .box-content .title-circle p, main #sec2 .box-container .box .box-content .type-circle h3, main #sec2 .box-container .box .box-content .type-circle .h3, main #sec2 .box-container .box .box-content .type-circle p {
+main #sec2 .box-container .box .box-content .type-circle p {
   margin: 0;
   font-size: 0.7rem;
   color: #000;
@@ -13225,20 +13312,45 @@ main #sec2 .box-container .box .box-content a i {
 main #sec2 .box-container .box .box-content a:hover {
   transform: scale(1.05);
 }
-main #sec2 .box-container .box:nth-child(1)::before {
+main #sec2 .box-container .box.lignina::before {
   background-image: url(../assets/section3/living.jpg);
 }
-main #sec2 .box-container .box:nth-child(2)::before {
+main #sec2 .box-container .box.pitza::before {
   background-image: url(../assets/section3/Pizza_opt.jpg);
 }
-main #sec2 .box-container .box:nth-child(3)::before {
+main #sec2 .box-container .box.weather::before {
   background-image: url(../assets/section3/sunny2_opt.jpg);
 }
-main #sec2 .box-container .box:nth-child(4)::before {
+main #sec2 .box-container .box.saint::before {
   background-image: url(../assets/section3/francis.jpg);
 }
-main #sec2 .box-container .box:nth-child(5)::before {
+main #sec2 .box-container .box.tech::before {
   background-image: url(../assets/section3/gob.jpg);
+}
+main #sec2 .box-container .box:nth-child(1) .title-circle {
+  font-family: "Ms Madi", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+main #sec2 .box-container .box:nth-child(2) .title-circle {
+  font-family: "Corinthia", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(3) .title-circle {
+  font-family: "Ephesis", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(4) .title-circle {
+  font-family: "Corinthia", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
+}
+main #sec2 .box-container .box:nth-child(5) .title-circle {
+  font-family: "Ms Madi", "Lato", sans-serif;
+  font-weight: 800;
+  font-size: 2rem !important;
 }
 main #sec3 {
   flex-direction: column;
@@ -13927,6 +14039,30 @@ main #sec6 .contact-form .submit-btn:hover {
   }
   main #sec2 .box-container .box .box-content .title-circle h3, main #sec2 .box-container .box .box-content .title-circle .h3, main #sec2 .box-container .box .box-content .title-circle p, main #sec2 .box-container .box .box-content .type-circle h3, main #sec2 .box-container .box .box-content .type-circle .h3, main #sec2 .box-container .box .box-content .type-circle p {
     font-size: 0.65rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(1) {
+    font-family: "Ms Madi", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(2) {
+    font-family: "Orbitron", "Lato", sans-serif;
+    font-weight: 800;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Ephesis", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.9rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Corinthia", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.9rem;
+  }
+  main #sec2 .box-container .box .box-content .title-circle:nth-child(3) {
+    font-family: "Ms Madi", "Lato", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
   }
   main #sec2 .box-container .box .box-content a {
     justify-content: center;
