@@ -11948,7 +11948,7 @@ textarea.form-control-lg {
 
 .header {
   height: 60px;
-  width: 80%;
+  width: 77%;
   position: fixed;
   top: 0;
   left: 250px;
@@ -14107,6 +14107,17 @@ main #sec6 .contact-form .submit-btn:hover {
   display: none;
 }
 
+@media screen and (max-width: 1045px) {
+  .header nav {
+    justify-content: flex-start;
+  }
+  .header nav .nav-links ul {
+    width: 100%;
+    gap: 25px;
+    padding-left: 0;
+    margin-right: 3vw;
+  }
+}
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
