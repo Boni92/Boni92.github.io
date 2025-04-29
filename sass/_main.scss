@@ -1,6 +1,6 @@
-$bg-main: #000000;
+$bg-main: transparent;
 .container-fluid{
-    background: $bg-main;
+    background-color: transparent;
     .row{
         // width: 100vw;
     }
@@ -35,7 +35,7 @@ $bg-main: #000000;
     }
 }
 main {
-    margin-top: $header-full-height;
+    // margin-top: $header-full-height;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -54,7 +54,7 @@ main {
         border: 1px solid darken($bg-main, 10%);
     }
     #sec1{
-        height: calc(100vh - $header-full-height);
+        height: calc(100vh);
         align-items: flex-start;
         color: #fff;
         padding-bottom: 50px;
@@ -807,13 +807,16 @@ main {
     position: fixed;
     top: 0;
     right: 0;
-    width: 80%;
+    left: 0;
+    // width: 80%;
+    width: 100vw;
     height: $header-full-height;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
+    // border-radius: 0 0 20px 20px;
 
     nav {
         ul {
@@ -890,7 +893,7 @@ main {
 
 .sidebar {
     .box.redes {
-        margin-top: 40px;
+        margin-top: 10px;
         padding-bottom: 30px;
         display: flex;
         flex-direction: column;
@@ -1041,6 +1044,8 @@ main {
     }
 
     .header {
+        border-radius: 0 0 55px 55px;
+
         nav {
             ul {
                 gap: calc(20px + 2vw);
@@ -1052,6 +1057,8 @@ main {
 
 @media (max-width: 920px) {
     .header {
+        border-radius: 0 0 55px 55px;
+
         nav {
             ul {
                 .gift-icon {

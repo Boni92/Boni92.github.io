@@ -6,7 +6,7 @@ $padding-top: 20px;
 
 .sidebar {
     width: calc($sidebar-width - $padding-left);
-    height: calc(100vh - $padding-top);
+    height: calc(100vh - 120px);
     background-color: $bg-sidebar;
     position: fixed;
     top: $padding-top/2;
@@ -14,13 +14,14 @@ $padding-top: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: $padding-top;
-    margin-top: $padding-top;
+    padding-top: 20px;
+    margin-top:calc($header-full-height + 20px);
     color: $text-color;
     border-radius: 20px;
     margin-left: 15px;
     z-index: 1000;
     *display: none;
+    overflow-y: auto;
     .sidebar-content{
         display: flex;
         flex-direction: column;
@@ -45,7 +46,7 @@ $padding-top: 20px;
             .img-personal{
                 width: 100%;
                 border-radius: 8px;
-                margin-bottom: 20px;
+                margin-bottom: 0px;
             }
             p{
                 margin: 0;
@@ -59,7 +60,7 @@ $padding-top: 20px;
             }
         }
         .box:nth-child(2){
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .redes{
             display: flex;

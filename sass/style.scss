@@ -1,24 +1,25 @@
+// Variables
+$sidebar-width: 300px;
+$header-full-height: 80px;
+
 // Importar Bootstrap desde node_modules
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+// Partials
 @import "sidebar";
 @import "header";
 @import "main";
 @import "footer";
 @import "mediaqueries";
+@import "responsive";
 
-// Variables
-$sidebar-width: 300px;
-$header-full-height: 80px;
-
-// Imports
-@import 'main';
-@import 'responsive';
-
-html{
+// Base styles
+html {
     font-size: 16px;
+    overflow-x: hidden;
 }
-body{
+
+body {
     font-family: "Nunito",'Roboto', sans-serif;
     margin: 0;
     padding: 0;

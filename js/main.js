@@ -11,7 +11,7 @@ function openGiftPopup() {
 function closeGiftPopup() {
     const popup = document.getElementById('giftPopup');
     popup.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = '';
 }
 
 function contactFromPopup() {
@@ -381,5 +381,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeGiftPopup();
             }
         });
+    }
+
+    // Gradient interactive effect
+    const interBubble = document.querySelector('.interactive');
+    if (interBubble) {
+        let curX = 0;
+        let curY = 0;
+        let tgX = 0;
+        let tgY = 0;
+
+        function move() {
+            curX += (tgX - curX) / 20;
+            curY += (tgY - curY) / 20;
+            interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+            requestAnimationFrame(() => {
+                move();
+            });
+        }
+
+        window.addEventListener('mousemove', (event) => {
+            tgX = event.clientX;
+            tgY = event.clientY;
+        });
+
+        move();
     }
 }); 

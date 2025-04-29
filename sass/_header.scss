@@ -3,6 +3,7 @@ $header-margin-top: 20px;
 $header-full-height: $header-height + $header-margin-top * 2;
 $padding-left: 80px;
 .header {
+    // display: none !important;
     height: $header-height;
     width: 77%;
     position: fixed;
@@ -20,7 +21,7 @@ $padding-left: 80px;
     margin-bottom: $header-margin-top;
     nav {
         width: 100%;
-        padding: 0;
+        padding: 0 0 0 245px;
         margin-right: 40px;
         display: flex;
         flex-direction: row;
@@ -32,15 +33,36 @@ $padding-left: 80px;
             gap: 60px;
             align-items: center;
             margin: 0;
-            padding-left: $padding-left;
+            // padding-left: $padding-left;
             width: calc(100% - $sidebar-width);
             position: relative;
             li {
                 padding: 0;
                 white-space: nowrap;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -5px;
+                    left: 0;
+                    background: linear-gradient(158deg, rgba(255,92,253,1) 0%, rgba(239,216,255,1) 50%, rgba(175,179,255,1) 100%);
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: rgba(255, 255, 255, 0.8);
+                    transform: translateY(-2px);
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
             }
-            
-            
         }
         .gift-icon {
             *position: absolute;
